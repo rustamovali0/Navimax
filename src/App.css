@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 *,
 *::after,
 *::before {
@@ -15,36 +16,215 @@
   --secondary-color: #2ecc71; /* İkincil renk */
   --accent-color: #e74c3c; /* Vurgu rengi */
   --background-color: #ecf0f1; /* Arka plan rengi */
-  --text-color: #2c3e50; /* Metin rengi */
-  /* background-color: var(--primary-color); */
+  --text-color: #3e546a; /* Metin rengi */
   --font-family: "Inter", sans-serif;
-  --navbar-color:rgb(95, 99, 109);
+  --navbar-color: rgb(95, 99, 109);
+  --HomeSection-font-family: "Manrope", sans-serif;
+}
+button{
+  cursor: pointer;
 }
 
 html {
   font-size: 62, 5%;
 }
-.Navbar{
-  width: 100%;
+.Navbar {
+  width: calc(100% - 3rem);
   height: 5rem;
-  background-color: #3498db;
+  background-color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0rem 2rem;
+  padding: 0rem 1.5rem;
+  position: fixed;
+  top: 1.5rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  border-bottom: 1.5px solid #f6f6f7;
+  z-index: 2;
 }
+
 .Navbar a {
   text-decoration: none;
   color: inherit;
 }
-.NavUl{
+.NavUl {
   display: flex;
-  gap: 1.5rem;
-  font-size: 16px;
-  font-family:var(--font-family) ;
+  gap: 2.5rem;
+  font-size: 14px;
+  font-family: var(--font-family);
 }
-.logo img{
-width: 8  rem;
-height: 3.2rem;
-color: var(--navbar-color);
+.logo img {
+  width: 8 rem;
+  height: 3.2rem;
+  color: var(--navbar-color);
+}
+#HomeSection1 {
+  width: 100%;
+  height: 72rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 11rem;
+  font-family: var(--HomeSection-font-family);
+
+}
+#HomeSection1 h1 {
+  font-size: 62px;
+  font-weight: 400;
+  padding-bottom: 1.4rem;
+}
+#HomeSection1 p {
+  font-size: 16px;
+  color: var(--navbar-color);
+}
+
+#HomeSection1 article {
+  text-align: center;
+}
+#HomeSection1 .HomeButtons button{
+  width: 10rem;
+  height: 3rem;
+  font-size:16px;
+  font-weight: 500;
+  background-color: black;
+  color: white;
+  border-radius: 3rem;
+  font-family: var(--HomeSection-font-family);
+  transition: 0.3s ease-in-out;
+}
+#HomeSection1 .HomeButtons button:hover{
+  background-color:rgb(210, 79, 61);
+  color:white;  
+}
+#HomeSection1 .HomeButtons button:first-child{
+  margin-right: 1rem;
+}
+#HomeSection1 .HomeButtons{
+  margin-top: 2rem;
+}
+.PhoneImgHome img{
+width: 50rem;
+height: 35rem;
+margin-bottom: 3rem;
+}
+
+/* Carusel CSS  */
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%; 
+  margin: 0 auto;
+}
+
+.slides {
+  display: flex;
+  animation: spin 30s linear infinite; 
+}
+
+.slide {
+  flex: 0 0 calc(25% - 3rem); 
+  margin-right: 3rem; 
+  align-self: center; 
+  opacity: 0.3; 
+}
+.slide:last-child {
+  margin-right: calc(25% - 3rem); 
+}
+
+.CarouselImgs {
+  width: 8rem; 
+  height: auto;
+  filter: grayscale(100%);
+
+}
+
+@keyframes spin {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Carusel CSS  */
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.slide-up {
+  animation: slideUp 0.7s ease-out forwards;
+  opacity: 0; 
+}
+
+.slide-up-delay-1 {
+  animation-delay: 0s;
+}
+
+.slide-up-delay-2 {
+  animation-delay: 0.5s;
+}
+
+.slide-up-delay-3 {
+  animation-delay: 1s;
+}
+
+.slide-up-delay-4 {
+  animation-delay: 1.5s;
+}
+
+.slide-up-delay-5 {
+  animation-delay: 2s;
+}
+
+.slide-up-delay-6 {
+  animation-delay: 2.5s;
+}
+#HomeSection2{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5rem;
+  align-items: center;
+  width: 100%;
+  height: 32rem;
+}
+#HomeSection2 img{
+width: 28rem;
+height: 26rem;
+border-radius: 20px;
+}
+#HomeSection3{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5rem;
+  align-items: center;
+  width: 100%;
+  height: 32rem;
+}
+#HomeSection3 img{
+width: 28rem;
+height: 26rem;
+border-radius: 20px;
+}
+#HomeSection4{
+  width: 100%;
+  height: 40rem;
+  background-color: rgb(242, 246, 245);
+    display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5rem;
+  align-items: center;
 }
