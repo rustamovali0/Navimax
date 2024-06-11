@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import PhoneImg from "../../Asserts/PhoneImg.png";
 import ChatImg from "../../Asserts/ChatImg.png";
-import UserImg from '../../Asserts/UsersImg.png';
-import Girl1 from '../../Asserts/Girl_1_Img.png';
-import Girl2 from '../../Asserts/Girl_2_Img.png';
+import UserImg from "../../Asserts/UsersImg.png";
+import Girl1 from "../../Asserts/Girl_1_Img.png";
+import Girl2 from "../../Asserts/Girl_2_Img.png";
 
 import Img1 from "../../Asserts/1.png";
 import Img2 from "../../Asserts/2.png";
@@ -88,15 +88,14 @@ const Home = () => {
             enim in eros elementum tristique.
           </p>
           <button>Get In Touch</button>
-
         </article>
       </section>
       <section id="HomeSection3">
         <article>
           <h5>BENEFITS</h5>
           <h1>
-          More then 7000+ Doctors are             <br />
-          members of Mobi
+            More then 7000+ Doctors are <br />
+            members of Mobi
           </h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
@@ -110,18 +109,28 @@ const Home = () => {
       </section>
       <section id="HomeSection4">
         <article>
-          <h5>Emily L.
-          </h5>
+          <h5>Emily L.</h5>
           <h1>
-          “I had tried every teeth whitening product out there, but nothing seemed to work. After just one session with Mobi, my teeth were multiple shades whiter. I couldn’t believe it!”
+            “I had tried every teeth whitening product out there, but nothing
+            seemed to work. After just one session with Mobi, my teeth were
+            multiple shades whiter. I couldn’t believe it!”
           </h1>
-          <p>
-          5-star review from App Store
-
-
-          </p>
+          <h5>5-star review from App Store</h5>
         </article>
         <img src={Girl1} alt="" />
+      </section>
+      <section id="HomeSection5">
+        <h4>HOW IT WORKS</h4>
+        <h1>
+          Transform Your Teeth with
+          <br />
+          SmileBright: A Step-by-Step Guide
+        </h1>
+        <p>
+          Mobi is a mobile app for dental health management, with appointment{" "}
+          <br />
+          tracking, reminders, and hygiene education.
+        </p>
       </section>
     </div>
   );
