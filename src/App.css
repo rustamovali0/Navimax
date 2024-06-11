@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 *,
 *::after,
 *::before {
@@ -16,9 +17,34 @@
   --background-color: #ecf0f1; /* Arka plan rengi */
   --text-color: #2c3e50; /* Metin rengi */
   /* background-color: var(--primary-color); */
+  --font-family: "Inter", sans-serif;
+  --navbar-color:rgb(95, 99, 109);
 }
 
 html {
   font-size: 62, 5%;
 }
-
+.Navbar{
+  width: 100%;
+  height: 5rem;
+  background-color: #3498db;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0rem 2rem;
+}
+.Navbar a {
+  text-decoration: none;
+  color: inherit;
+}
+.NavUl{
+  display: flex;
+  gap: 1.5rem;
+  font-size: 16px;
+  font-family:var(--font-family) ;
+}
+.logo img{
+width: 8  rem;
+height: 3.2rem;
+color: var(--navbar-color);
+}
