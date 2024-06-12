@@ -22,6 +22,7 @@ const Card = ({ image }) => {
     </div>
   );
 };
+
 const Home = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const items = [Img1, Img2, Img3, Img4];
@@ -278,6 +279,53 @@ const Home = () => {
           <h5>5-star review from App Store</h5>
         </article>
         <img src={Girl2} alt="" />
+      </section>
+      <section id="HomeSection11">
+        <div className="HomeSection11Card">
+          <h3>John D.</h3>
+          <h2>
+            “I had been experiencing tooth pain for years, but was too afraid to
+            go to the dentist. Mobi made the process easy and painless, and now
+            I’m pain-free!”
+          </h2>
+          <p>5-star review from Play Store</p>
+        </div>
+        <div className="HomeSection11Card">
+          <h3>John D.</h3>
+          <h2>
+            “I had been experiencing tooth pain for years, but was too afraid to
+            go to the dentist. Mobi made the process easy and painless, and now
+            I’m pain-free!”
+          </h2>
+          <p>5-star review from Play Store</p>
+        </div>
+      </section>
+      <section id="HomeSection12">
+        <h4>ANALYTICS</h4>
+        <h2>Join millions who find peace with us</h2>
+        <div className="countersCon">
+          <div className="counter">
+            <h1>1541</h1>
+            <p>Community Members</p>
+          </div>
+          <div className="counter">
+            <h1>3941</h1>
+            <p>Minutes spent in self-care</p>
+          </div>
+          <div className="counter">
+            <h1>2143</h1>
+            <p>5-star reviews</p>
+          </div>
+        </div>
+      </section>
+      <section id="HomeSection13">
+        <div className="HomeSection13Div">
+          <h4>BLOG</h4>
+          <h2>Get the latest news</h2>
+        </div>
+        <div className="HomeSection13Div">
+        <button>See All</button>
+        </div>
       </section>
     </div>
   );
