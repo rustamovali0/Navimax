@@ -675,7 +675,12 @@ color: var(--text-color);
 .HomeSection16Div {
   margin: 20px;
 }
-
+.container{
+  border: 1px solid rgb(230, 224, 224);
+  margin: 0rem 7rem 4rem 7rem;
+  padding-top: 1rem;
+  border-radius: 15px;
+}
 .question {
   cursor: pointer;
   display: flex;
@@ -696,11 +701,55 @@ color: var(--text-color);
   margin-bottom: 10px;
 }
 .question-container{
-  width: 70rem;
-  padding: 0rem 3.5rem 0rem 3.5rem;
-  margin: 0rem 4rem 4rem 4rem;
-  border-bottom:1px solid black ;
+  
+  padding: 0rem 3.5rem 1rem 1.5rem;
+  margin: 0rem 2rem 2rem 2rem;
+  border-bottom:1px solid rgb(232, 228, 228) ;
 }
 /* ------------------ */
 
+/* Footer.jsx -------------------------------- */
+.Footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-top: 1px solid #e7e7e7; 
+margin: 0rem 3rem;
+}
 
+.footer-logo {
+  max-height: 50px; 
+}
+
+.iconsFooter {
+  font-size: 24px;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.footer-form {
+  display: flex;
+  align-items: center;
+}
+
+.footer-form input[type="email"] {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.footer-form input[type="submit"] {
+  padding: 10px 20px;
+  background-color: red; 
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.footer-form input[type="submit"]:hover {
+  background-color: rgb(137, 13, 13); 
+}
+/* ---------------------------------------------------------------------------------------- */
