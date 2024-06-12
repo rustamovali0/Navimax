@@ -15,6 +15,10 @@ import tooth1 from "../../Asserts/tooth1.svg";
 import tooth2 from "../../Asserts/tooth2.svg";
 import tooth3 from "../../Asserts/tooth3.svg";
 import tooth4 from "../../Asserts/tooth4.svg";
+import PlantsImg1 from "../../Asserts/PlantsImg1.png";
+import PlantsImg2 from "../../Asserts/PlantsImg2.png";
+import PlantsImg3 from "../../Asserts/PlantsImg3.png";
+
 const Card = ({ image }) => {
   return (
     <div className="card">
@@ -26,7 +30,40 @@ const Card = ({ image }) => {
 const Home = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const items = [Img1, Img2, Img3, Img4];
+  const questionsAndAnswers = [
+    {
+      question: "What kind of teeth treatments do you offer?",
+      answer: "We offer a variety of teeth treatments, including dental cleanings, teeth whitening, fillings, root canals, crowns, and bridges."
+    },
+    {
+      question: "How often should I get a dental check-up?",
+      answer: "It is recommended to get a dental check-up every six months to ensure optimal oral health."
+    },
+    {
+      question: "What is teeth whitening and how does it work?",
+      answer: "Teeth whitening is a cosmetic treatment that uses bleach or other materials to lighten the color of your teeth. It works by breaking down the stains on your teeth and removing them."
+    },
+    {
+      question: "What should I do if I have a toothache?",
+      answer: "If you have a toothache, it is important to schedule an appointment with your dentist as soon as possible. In the meanwhile, you can try rinsing your mouth with warm salt water, taking pain medication as directed, and avoiding hot or cold foods and drinks."
+    },
+    {
+      question: "How long do dental implants last?",
+      answer: "With proper care, dental implants can last a lifetime. However, the actual lifespan of dental implants may vary depending on several factors, including the patient's oral health habits and the quality of the implant and crown materials used."
+    }
+  ];
 
+  const [openIndexes, setOpenIndexes] = useState([]);
+
+  const toggleAnswer = (index) => {
+    setOpenIndexes(prevIndexes => {
+      if (prevIndexes.includes(index)) {
+        return prevIndexes.filter(i => i !== index);
+      } else {
+        return [...prevIndexes, index];
+      }
+    });
+  };
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) =>
@@ -324,8 +361,52 @@ const Home = () => {
           <h2>Get the latest news</h2>
         </div>
         <div className="HomeSection13Div">
-        <button>See All</button>
+          <button>See All</button>
         </div>
+      </section>
+      <section id="HomeSection14">
+        <div className="HomeSection14Div">
+          <img src={PlantsImg1} alt="" />
+          <p>Apr 8, 2022</p>
+          <h2>Starting and Growing a Career in Web Design</h2>
+        </div>
+        <div className="HomeSection14Div">
+          <img src={PlantsImg2} alt="" />
+          <p>Mar 15, 2022</p>
+          <h2>Create a Landing Page That Performs Great</h2>
+        </div>
+        <div className="HomeSection14Div">
+          <img src={PlantsImg3} alt="" />
+          <p>Feb 28, 2022</p>
+          <h2>How Can Designers Prepare for the Future?</h2>
+        </div>
+      </section>
+      <section id="HomeSection15">
+        <h4>HELP CENTER</h4>
+        <h2>Frequently Asked Questions</h2>
+        <p>
+          Our customer support team is here to assist you. Start by browsing our
+          FAQ
+          <br />
+          section to find answers to your questions.
+        </p>
+      </section>
+      <section id="HomeSection16">
+      <div className="container">
+      {questionsAndAnswers.map((qa, index) => (
+        <div key={index} className="question-container">
+          <div className="question" onClick={() => toggleAnswer(index)}>
+          <span className="plus-icon">{openIndexes.includes(index) ? 'x' : '+'}</span>
+            <span>{qa.question}</span>
+          </div>
+          {openIndexes.includes(index) && (
+            <div className="answer">
+              {qa.answer}
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
       </section>
     </div>
   );
