@@ -21,7 +21,7 @@
   --navbar-color: rgb(95, 99, 109);
   --HomeSection-font-family: "Manrope", sans-serif;
 }
-button{
+button {
   cursor: pointer;
 }
 
@@ -68,7 +68,6 @@ html {
   align-items: center;
   padding-top: 11rem;
   font-family: var(--HomeSection-font-family);
-
 }
 #HomeSection1 h1 {
   font-size: 62px;
@@ -83,10 +82,10 @@ html {
 #HomeSection1 article {
   text-align: center;
 }
-#HomeSection1 .HomeButtons button{
+#HomeSection1 .HomeButtons button {
   width: 10rem;
   height: 3rem;
-  font-size:16px;
+  font-size: 16px;
   font-weight: 500;
   background-color: black;
   color: white;
@@ -94,20 +93,20 @@ html {
   font-family: var(--HomeSection-font-family);
   transition: 0.3s ease-in-out;
 }
-#HomeSection1 .HomeButtons button:hover{
-  background-color:rgb(210, 79, 61);
-  color:white;  
+#HomeSection1 .HomeButtons button:hover {
+  background-color: rgb(210, 79, 61);
+  color: white;
 }
-#HomeSection1 .HomeButtons button:first-child{
+#HomeSection1 .HomeButtons button:first-child {
   margin-right: 1rem;
 }
-#HomeSection1 .HomeButtons{
+#HomeSection1 .HomeButtons {
   margin-top: 2rem;
 }
-.PhoneImgHome img{
-width: 50rem;
-height: 35rem;
-margin-bottom: 3rem;
+.PhoneImgHome img {
+  width: 50rem;
+  height: 35rem;
+  margin-bottom: 3rem;
 }
 
 /* Carusel CSS  */
@@ -116,30 +115,29 @@ margin-bottom: 3rem;
   position: relative;
   overflow: hidden;
   width: 75rem;
-  max-width: 100%; 
+  max-width: 100%;
   margin: 0 auto;
 }
 
 .slides {
   display: flex;
-  animation: spin 30s linear infinite; 
+  animation: spin 30s linear infinite;
 }
 
 .slide {
-  flex: 0 0 calc(25% - 3rem); 
-  margin-right: 3rem; 
-  align-self: center; 
-  opacity: 0.3; 
+  flex: 0 0 calc(25% - 3rem);
+  margin-right: 3rem;
+  align-self: center;
+  opacity: 0.3;
 }
 .slide:last-child {
-  margin-right: calc(25% - 3rem); 
+  margin-right: calc(25% - 3rem);
 }
 
 .CarouselImgs {
-  width: 8rem; 
+  width: 8rem;
   height: auto;
   filter: grayscale(100%);
-
 }
 
 @keyframes spin {
@@ -165,7 +163,7 @@ margin-bottom: 3rem;
 }
 .slide-up {
   animation: slideUp 0.7s ease-out forwards;
-  opacity: 0; 
+  opacity: 0;
 }
 
 .slide-up-delay-1 {
@@ -191,7 +189,14 @@ margin-bottom: 3rem;
 .slide-up-delay-6 {
   animation-delay: 2.5s;
 }
-#HomeSection2{
+.slide-up-delay-7 {
+  animation-delay: 3s;
+}
+
+.slide-up-delay-8 {
+  animation-delay: 3.5s;
+}
+#HomeSection2 {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -201,43 +206,41 @@ margin-bottom: 3rem;
   width: 100%;
   margin-bottom: 5rem;
 }
-#HomeSection2 img{
-width: 28rem;
-height: 26rem;
-border-radius: 20px;
+#HomeSection2 img {
+  width: 28rem;
+  height: 26rem;
+  border-radius: 20px;
 }
-#HomeSection2 h5{
+#HomeSection2 h5 {
   font-size: 14px;
   color: rgb(166, 168, 175);
   font-weight: 500;
   letter-spacing: 4px;
-
 }
-#HomeSection2 h1{
+#HomeSection2 h1 {
   font-size: 32px;
   padding: 1.5rem 0rem;
 }
-#HomeSection2 p{
-color: var(--text-color);
-
+#HomeSection2 p {
+  color: var(--text-color);
 }
-#HomeSection2 button{
+#HomeSection2 button {
   width: 7.5rem;
   height: 2.5rem;
-  font-size:14px;
+  font-size: 14px;
   font-weight: 500;
-  background-color:rgb(210, 79, 61);
+  background-color: rgb(210, 79, 61);
   color: white;
   border-radius: 3rem;
   font-family: var(--HomeSection-font-family);
   transition: 0.3s ease-in-out;
   margin-top: 2rem;
 }
-#HomeSection2 button:hover{
-  background-color:black;
-  color:white;  
+#HomeSection2 button:hover {
+  background-color: black;
+  color: white;
 }
-#HomeSection3{
+#HomeSection3 {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -247,94 +250,96 @@ color: var(--text-color);
   width: 100%;
   margin-bottom: 5rem;
 }
-#HomeSection3 img{
-width: 28rem;
-height: 26rem;
-border-radius: 20px;
+#HomeSection3 img {
+  width: 28rem;
+  height: 26rem;
+  border-radius: 20px;
 }
-#HomeSection3 h5{
+#HomeSection3 h5 {
   font-size: 14px;
   color: rgb(166, 168, 175);
   font-weight: 500;
   letter-spacing: 4px;
-
 }
-#HomeSection3 h1{
+#HomeSection3 h1 {
   font-size: 32px;
   padding: 1.5rem 0rem;
 }
-#HomeSection3 p{
+#HomeSection3 p {
   color: var(--text-color);
-  
-  }
-  #HomeSection3 button{
-    width: 10.3rem;
-    height: 2.5rem;
-    font-size:14px;
-    font-weight: 500;
-    background-color:rgb(210, 79, 61);
-    color: white;
-    border-radius: 3rem;
-    font-family: var(--HomeSection-font-family);
-    transition: 0.3s ease-in-out;
-    margin-top: 2rem;
-  }
-  #HomeSection3 button:hover{
-    background-color:black;
-    color:white;  
-  }
-#HomeSection4{
+}
+#HomeSection3 button {
+  width: 10.3rem;
+  height: 2.5rem;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: rgb(210, 79, 61);
+  color: white;
+  border-radius: 3rem;
+  font-family: var(--HomeSection-font-family);
+  transition: 0.3s ease-in-out;
+  margin-top: 2rem;
+}
+#HomeSection3 button:hover {
+  background-color: black;
+  color: white;
+}
+#HomeSection4 {
   width: 100%;
   height: 35rem;
   background-color: rgb(242, 246, 245);
-    display: flex;
+  display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 5rem;
   align-items: center;
+  border-radius: 16px;
+
 }
-#HomeSection4{
+#HomeSection4 {
   width: calc(100% - 6rem);
   margin: 0rem 3rem;
   height: 30rem;
 }
-#HomeSection4{
+#HomeSection4 {
   padding-left: 5rem;
- }
- #HomeSection4 h1{
- font-size: 32px;
- font-weight: 600;
- }
- #HomeSection4 h5{
-  color: var(--text-color); 
+}
+#HomeSection4 h1 {
+  font-size: 32px;
+  font-weight: 600;
+}
+#HomeSection4 h5 {
+  color: var(--text-color);
   font-weight: 600;
   padding: 1.5rem 0rem;
-  }
-  #HomeSection5{
+}
+#HomeSection4 img{
+  margin-top: 1rem;
+
+}
+#HomeSection5 {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-text-align: center;
-margin: 3rem 0rem;
-  }
-  #HomeSection5 h4{
-    letter-spacing: 4px;
-color: var(--text-color);
-font-weight: 500;
-font-size: 14px;
-  }
-  #HomeSection5 h1{
+  text-align: center;
+  margin: 3rem 0rem;
+}
+#HomeSection5 h4 {
+  letter-spacing: 4px;
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 14px;
+}
+#HomeSection5 h1 {
   font-size: 32px;
-  }
-  #HomeSection5 p{
-    color: var(--text-color);
-
-  }
-  
+}
+#HomeSection5 p {
+  color: var(--text-color);
+}
 
 /* ----------------------------------------------------------------------------- */
-.HomeSection5 {
+.HomeSection6 {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -342,40 +347,36 @@ font-size: 14px;
   width: calc(100% - 10rem);
   height: 100vh;
   margin: 0rem 3rem;
-  
 }
-.HomeSection5 h1{
- font-size: 20px;
- padding-bottom: 2rem;
+.HomeSection6 h1 {
+  font-size: 20px;
+  padding-bottom: 2rem;
 }
-.HomeSection5 .textsCon  {
+.HomeSection6 .textsCon {
   cursor: pointer;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 10px;
   margin-bottom: 10px;
   transition: background-color 0.3s;
-  background-color: rgb(246, 246, 247);
+  background-color: rgb(252, 246, 247);
 }
 
-.HomeSection5 .texts p:hover {
-  background-color: #f4eaea;
-}
-.HomeSection5 button{
+.HomeSection6 button {
   width: 7.5rem;
   height: 2.5rem;
-  font-size:14px;
+  font-size: 14px;
   font-weight: 500;
-  background-color:rgb(210, 79, 61);
+  background-color: rgb(210, 79, 61);
   color: white;
   border-radius: 3rem;
   font-family: var(--HomeSection-font-family);
   transition: 0.3s ease-in-out;
   margin-top: 2rem;
 }
-.HomeSection5 button:hover{
-  background-color:black;
-  color:white;  
+.HomeSection6 button:hover {
+  background-color: black;
+  color: white;
 }
 .cards {
   display: flex;
@@ -390,7 +391,7 @@ font-size: 14px;
 .card img {
   width: 35rem;
   height: 27rem;
-
+  border-radius: 15px;
 }
 
 .description {
@@ -400,4 +401,146 @@ font-size: 14px;
 .description p {
   font-size: 18px;
   color: #333;
+}
+
+#HomeSection7 {
+  width: calc(100% - 6rem);
+  height: 27rem;
+  background-color: rgb(242, 246, 245);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5rem;
+  align-items: center;
+  margin: 0rem 3rem;
+  padding-left: 5rem;
+
+
+}
+#HomeSection7 h1 {
+  font-size: 32px;
+  font-weight: 600;
+}
+#HomeSection7 h5 {
+  color: var(--text-color);
+  font-weight: 500;
+  padding: 1.5rem 0rem;
+  font-size: 16px;
+}
+#HomeSection7 img{
+  height: 29rem;
+  width: 30rem;
+  margin-top: 2.5rem;
+}
+
+
+.HomeSection7Buttons button {
+  width: 10rem;
+  height: 3rem;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: black;
+  color: white;
+  border-radius: 3rem;
+  font-family: var(--HomeSection-font-family);
+  transition: 0.3s ease-in-out;
+}
+.HomeSection7Buttons button:hover {
+  background-color: rgb(210, 79, 61);
+  color: white;
+}
+.HomeSection7Buttons button:first-child {
+  margin-right: 1rem;
+}
+.HomeSection7Buttons {
+  margin-top: 2rem;
+}
+
+#HomeSection8 {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1rem;
+  margin: 3rem 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid rgb(235, 229, 229);
+}
+#HomeSection8 h4 {  
+  letter-spacing: 4px;
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 14px;
+}
+#HomeSection8 h1 {
+  font-size: 32px;
+}
+#HomeSection8 p {
+  color: var(--text-color);
+}
+#HomeSection9{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+#HomeSection9 .HomeSection9Card{
+  width: 30rem;
+  height: 15rem;
+}
+#HomeSection9 .HomeSection9Card h2{
+  font-size: 18px;
+}
+#HomeSection9 .HomeSection9Card p{
+  font-size: 14px;
+  color: var(--text-color);
+}
+#HomeSection9 .HomeSection9Card{
+  width: 30rem;
+  height: 15rem;
+}
+#HomeSection9 .HomeSection9Card button {
+  width: 7.5rem;
+  height: 2.5rem;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: rgb(237, 235, 235);
+  color: rgb(210, 79, 61);
+  border-radius: 3rem;
+  font-family: var(--HomeSection-font-family);
+  transition: 0.3s ease-in-out;
+  margin-top: 2rem;
+}
+#HomeSection9 .HomeSection9Card button:hover {
+  background-color: rgb(210, 79, 61);
+  color: white;
+}
+#HomeSection10 {
+  width: calc(100% - 6rem);
+
+  height: 30rem;
+  background-color: rgb(242, 246, 245);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5rem;
+  align-items: center;
+  margin: 0rem 3rem;
+  padding-left: 5rem;
+  border-radius: 16px;
+
+}
+
+#HomeSection10 h1 {
+  font-size: 32px;
+  font-weight: 600;
+}
+#HomeSection10 h5 {
+  color: var(--text-color);
+  font-weight: 600;
+  padding: 1.5rem 0rem;
+}
+#HomeSection10 img{
+  margin-top: 1rem;
+  height: 29rem;
 }
