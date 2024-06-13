@@ -163,12 +163,12 @@ const Home = () => {
         <article>
           <h5>BENEFITS</h5>
           <h1>
-            Save time and money with
-            our powerful tools
+            Save time and money with 
+            our <br /> powerful tools
           </h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius
-            enim in eros elementum tristique.
+            <br /> enim in eros elementum tristique.
           </p>
           <button>Get In Touch</button>
         </article>
@@ -177,12 +177,12 @@ const Home = () => {
         <article>
           <h5>BENEFITS</h5>
           <h1>
-            More then 7000+ Doctors are 
+            More then 7000+ Doctors are <br />
             members of Mobi
           </h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            varius
+            varius <br />
             
             enim in eros elementum tristique.
           </p>
