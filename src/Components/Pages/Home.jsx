@@ -164,13 +164,10 @@ const Home = () => {
           <h5>BENEFITS</h5>
           <h1>
             Save time and money with
-            <br />
             our powerful tools
           </h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            varius
-            <br />
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius
             enim in eros elementum tristique.
           </p>
           <button>Get In Touch</button>
@@ -180,13 +177,13 @@ const Home = () => {
         <article>
           <h5>BENEFITS</h5>
           <h1>
-            More then 7000+ Doctors are <br />
+            More then 7000+ Doctors are 
             members of Mobi
           </h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
             varius
-            <br />
+            
             enim in eros elementum tristique.
           </p>
           <button>Download App-Free</button>
@@ -236,7 +233,7 @@ const Home = () => {
           ))}
         </div>
       </div>
-      <section id="HomeSection7" className="slide-up-delay-8">
+      <section id="HomeSection7">
         <article>
           <h1>Download our Mobi app to get started now</h1>
           <h5>
@@ -252,7 +249,7 @@ const Home = () => {
           <img src={PhoneImg} alt="" />
         </div>
       </section>
-      <section id="HomeSection8" className="slide-up-delay-8">
+      <section id="HomeSection8">
         <h4>BENEFITS</h4>
         <h1>
           Straighten your teeth without braces
