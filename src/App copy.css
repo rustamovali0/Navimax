@@ -209,8 +209,8 @@ html {
   margin-bottom: 5rem;
 }
 #HomeSection2 img {
-  width: 420px;
-  height: 420px;
+  width: 28rem;
+  height: 26rem;
   border-radius: 20px;
 }
 #HomeSection2 h5 {
@@ -253,8 +253,8 @@ html {
   margin-bottom: 5rem;
 }
 #HomeSection3 img {
-  width: 470px;
-  height: 420px;
+  width: 28rem;
+  height: 26rem;
   border-radius: 20px;
 }
 #HomeSection3 h5 {
@@ -1135,26 +1135,17 @@ background-color: rgb(246, 238, 228);
       padding-left: 4rem;
     }
     #HomeSection2 img {
-      width: 100rem;
+      width: 120rem;
       height: 60rem;
       margin-left: 8rem;
     
     }
-   
     #HomeSection3 {
       display: flex;
       flex-direction: column-reverse;
       justify-content: start;
       align-items: start;
       padding-left: 4rem;
-    }
-    #HomeSection2 article{
-      padding-left: 8rem;
-
-    }
-    #HomeSection3 article{
-      padding-left: 8rem;
-
     }
     #HomeSection3 img {
       width: 60rem;
@@ -1164,19 +1155,22 @@ background-color: rgb(246, 238, 228);
 
     }
     #HomeSection4 {
-      width: 62rem;
-      height: 86rem;
+      width: 100%;
+      height: 93rem;
       background-color: rgb(242, 246, 245);
       display: flex;
       flex-direction: column-reverse;
       justify-content: center;
-      margin: 0rem 0rem 0rem 7rem;
-      padding-left: 0rem;
+  
       gap: 5rem;
       align-items: center;
       border-radius: 16px;
     }
-    
+    #HomeSection4 {
+      width: 69rem;
+      margin: 0rem 2rem;
+      padding-left: 0rem;
+    }
   
     #HomeSection4 h1 {
       font-size: 26px;
@@ -1190,20 +1184,17 @@ background-color: rgb(246, 238, 228);
     }
     #HomeSection4 img {
       margin-top: 5rem;
-      width: 62rem;
-      height: 64rem;
-    }
-    #HomeSection5 {
-     margin-left: 17rem;
+      width: 70rem;
+      height: 70rem;
     }
     .HomeSection6 {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: start;
-      width:70rem;
+      align-items: start;
+      justify-content: center;
+      width: calc(100% - 14rem);
       height: 120rem;
-      margin: 0rem 4.5rem;
+      margin: 0rem 6.5rem;
     }
     .HomeSection6 h1 {
       font-size: 20px;
@@ -1211,21 +1202,18 @@ background-color: rgb(246, 238, 228);
     }
   
     .card {
-      /* margin: 7px; */
+      margin: 10px;
       padding: 10px;
       cursor: pointer;
     }
   
     .card img {
-      width: 63rem;
-      height: 53rem;
-      margin-right: 3rem;
+      width: 72rem;
+      height: 70rem;
     }
     .texts {
-      width: 63rem;
+      width: 70rem;
       height: 5rem;
-      margin-right: 3rem;
-
     }
     #HomeSection7 {
       width: calc(100% - 6rem);
@@ -1377,5 +1365,11 @@ background-color: rgb(246, 238, 228);
       gap: 4.5rem;
     }
   }
- 
+  @media (min-width: 1024px) {
+    #HomeSection3 img {
+      max-width: 500rem; /* Maksimum genişlik değeri */
+      width: 100%; /* Genişliği mevcut alanın %100'ü */
+      height: auto; /* Yüksekliği otomatik olarak ayarla */
+    }
+  }
   /* -------------------------------1024--------------------------- */

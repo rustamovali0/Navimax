@@ -188,7 +188,7 @@ const Home = () => {
           </p>
           <button>Download App-Free</button>
         </article>
-        <img src={UserImg} alt="" />
+        <img src={UserImg} alt=""/>
       </section>
       <section id="HomeSection4" className="slide-up-delay-7">
         <article>
