@@ -43,23 +43,56 @@ html {
   right: 1.5rem;
   border-bottom: 1.5px solid #f6f6f7;
   z-index: 2;
+  transition: top 0.3s ease;
 }
 
 .Navbar a {
   text-decoration: none;
   color: inherit;
 }
+
 .NavUl {
   display: flex;
   gap: 2.5rem;
   font-size: 14px;
   font-family: var(--font-family);
 }
+
 .logo img {
-  width: 8 rem;
+  width: 8rem;
   height: 3.2rem;
   color: var(--navbar-color);
 }
+
+/* Burger Menu */
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.burger-menu div {
+  width: 25px;
+  height: 2px;
+  background-color: #333;
+  margin: 4px;
+  transition: transform 0.4s, opacity 0.4s;
+}
+
+.burger-menu.open .line1 {
+  transform: rotate(-45deg) translate(-8px, 9px);
+}
+
+.burger-menu.open .line2 {
+  opacity: 0;
+}
+
+.burger-menu.open .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+
 #HomeSection1 {
   width: 100%;
   height: 72rem;
@@ -68,7 +101,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 11rem;
+  padding-top: 8rem;
   font-family: var(--HomeSection-font-family);
 }
 #HomeSection1 h1 {
@@ -106,7 +139,7 @@ html {
   margin-top: 2rem;
 }
 .PhoneImgHome img {
-  width: 50rem;
+  width: 100%;
   height: 35rem;
   margin-bottom: 3rem;
 }
@@ -116,7 +149,7 @@ html {
 .carousel {
   position: relative;
   overflow: hidden;
-  width: 75rem;
+  width: 55%;
   max-width: 100%;
   margin: 0 auto;
 }
@@ -198,19 +231,25 @@ html {
 .slide-up-delay-8 {
   animation-delay: 3.5s;
 }
-#HomeSection2 {
+#HomeSection2{
+  display: flex;
+  justify-content: center;
+}
+.HomeSection2Div {
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
   gap: 5rem;
   align-items: center;
-  width: 100%;
+  width: 72rem;
   margin-bottom: 5rem;
 }
 #HomeSection2 img {
-  width: 420px;
-  height: 420px;
+  /* width: 420px;
+  height: 420px; */
+   width: 35%;
+  height: 26rem;
   border-radius: 20px;
 }
 #HomeSection2 h5 {
@@ -242,19 +281,23 @@ html {
   background-color: black;
   color: white;
 }
-#HomeSection3 {
+#HomeSection3{
+  display: flex;
+  justify-content: center;
+}
+.HomeSection3Div {
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
   gap: 5rem;
   align-items: center;
-  width: 100%;
+  width: 72rem;
   margin-bottom: 5rem;
 }
 #HomeSection3 img {
-  width: 470px;
-  height: 420px;
+  width: 35%;
+  height: 26rem;
   border-radius: 20px;
 }
 #HomeSection3 h5 {
@@ -286,9 +329,15 @@ html {
   background-color: black;
   color: white;
 }
-#HomeSection4 {
-  width: 100%;
-  height: 35rem;
+#HomeSection4{
+  display: flex;
+  justify-content: center;
+}
+.HomeSection4Div {
+ 
+  width: 72rem;  
+  margin: 0rem 3rem;
+  height: auto;
   background-color: rgb(242, 246, 245);
   display: flex;
   flex-direction: row;
@@ -296,15 +345,11 @@ html {
   gap: 5rem;
   align-items: center;
   border-radius: 16px;
-}
-#HomeSection4 {
-  width: calc(100% - 6rem);
-  margin: 0rem 3rem;
-  height: 30rem;
-}
-#HomeSection4 {
   padding-left: 5rem;
+
 }
+
+
 #HomeSection4 h1 {
   font-size: 32px;
   font-weight: 600;
@@ -316,6 +361,8 @@ html {
 }
 #HomeSection4 img {
   margin-top: 1rem;
+  width: 100%;
+  height: 29rem;
 }
 #HomeSection5 {
   display: flex;
@@ -339,14 +386,21 @@ html {
 }
 
 /* ----------------------------------------------------------------------------- */
-.HomeSection6 {
+.HomeSection6{
+  display: flex;
+  justify-content: center;
+
+}
+
+.HomeSection6Div {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: calc(100% - 10rem);
-  height: 100vh;
-  margin: 0rem 3rem;
+  width: 72rem;
+  margin: 0rem 3rem 3rem 3rem;
+
+
 }
 .HomeSection6 h1 {
   font-size: 20px;
@@ -354,10 +408,10 @@ html {
 }
 .HomeSection6 .textsCon {
   cursor: pointer;
-  padding: 10px;
+  padding: 14px;
   border: 1px solid #ccc;
   border-radius: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 13px;
   transition: background-color 0.3s;
   background-color: rgb(252, 246, 247);
 }
@@ -381,19 +435,21 @@ html {
 .cards {
   display: flex;
 }
-
-.card {
-  margin: 10px;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.card img {
-  width: 35rem;
-  height: 27rem;
+.card{
+  width: 40rem;
   border-radius: 15px;
 }
 
+
+.card img {
+  width: 100%;
+  height: 27rem;
+  border-radius: 15px;
+}
+.HomeSection6 .texts {
+  height: 27rem;
+  margin-left: 1rem;
+  }
 .description {
   margin-top: 20px;
 }
@@ -402,9 +458,12 @@ html {
   font-size: 18px;
   color: #333;
 }
-
-#HomeSection7 {
-  width: calc(100% - 6rem);
+#HomeSection7{
+  display: flex;
+  justify-content: center;
+}
+.HomeSection7Div {
+  width: 72rem;
   height: 27rem;
   background-color: rgb(242, 246, 245);
   display: flex;
@@ -414,6 +473,7 @@ html {
   align-items: center;
   margin: 0rem 3rem;
   padding-left: 5rem;
+  border-radius: 15px;
 }
 #HomeSection7 h1 {
   font-size: 32px;
@@ -452,15 +512,21 @@ html {
 .HomeSection7Buttons {
   margin-top: 2rem;
 }
+#HomeSection8{
 
-#HomeSection8 {
+  display: flex;
+  justify-content: center;
+  padding: 0rem 3rem;
+}
+#HomeSection8 article{
+  width: 72rem;
   display: flex;
   flex-direction: column;
   align-items: start;
   gap: 1rem;
-  margin: 3rem 3rem;
+  margin: 3rem 0rem;
   padding-bottom: 2rem;
-  border-bottom: 2px solid rgb(235, 229, 229);
+  border-bottom: 2px solid rgb(253, 245, 245);
 }
 #HomeSection8 h4 {
   letter-spacing: 4px;
@@ -474,15 +540,23 @@ html {
 #HomeSection8 p {
   color: var(--text-color);
 }
-#HomeSection9 {
+.HomeSection9Div {
+  width: 72rem;
+  height: auto;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  padding: 0rem 3rem;
   gap: 3rem;
 }
-#HomeSection9 .HomeSection9Card {
-  width: 30rem;
+#HomeSection9{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#HomeSection9 .HomeSection9Card{
+  width: 31rem;
+  margin: 1rem 0rem;
   height: 15rem;
 }
 #HomeSection9 .HomeSection9Card h2 {
@@ -492,10 +566,7 @@ html {
   font-size: 14px;
   color: var(--text-color);
 }
-#HomeSection9 .HomeSection9Card {
-  width: 30rem;
-  height: 15rem;
-}
+
 #HomeSection9 .HomeSection9Card button {
   width: 7.5rem;
   height: 2.5rem;
@@ -512,19 +583,25 @@ html {
   background-color: rgb(210, 79, 61);
   color: white;
 }
-#HomeSection10 {
-  width: calc(100% - 6rem);
+#HomeSection10{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  height: 30rem;
+.HomeSection10Div {
+  width: 72rem;
+
+  height: auto;
   background-color: rgb(246, 238, 228);
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 5rem;
   align-items: center;
-  margin: 0rem 3rem;
   padding-left: 5rem;
   border-radius: 16px;
+  margin: 0rem 3rem;
 }
 
 #HomeSection10 h1 {
@@ -537,8 +614,10 @@ html {
   padding: 1.5rem 0rem;
 }
 #HomeSection10 img {
-  margin-top: 1rem;
+  width: 100%;
   height: 29rem;
+  margin-top: 1rem;
+
 }
 #HomeSection11 {
   display: flex;
@@ -577,6 +656,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
   margin: 3rem 3rem;
   padding-bottom: 2rem;
@@ -596,6 +676,7 @@ html {
 }
 .countersCon {
   display: flex;
+  justify-content: center;
   gap: 13rem;
   flex-wrap: wrap;
 }
@@ -607,11 +688,15 @@ html {
 .countersCon p {
   color: var(--text-color);
 }
-
-#HomeSection13 {
+#HomeSection13{
+  display: flex;
+  justify-content: center;
+}
+.HomeSection13DivCon {
   display: flex;
   justify-content: space-between;
   padding: 0rem 3rem 3rem 3rem;
+  width: 72rem;
 }
 #HomeSection13 button {
   width: 5.5rem;
@@ -632,13 +717,18 @@ html {
   font-size: 14px;
   padding-bottom: 1rem;
 }
-#HomeSection14 {
+#HomeSection14{
+  padding:0rem 3rem ;
+}
+.HomeSection14DivCon {
   display: flex;
-  flex-wrap: wrap;
+  overflow-y: auto;
   width: 100%;
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
+
+
 }
 #HomeSection14 img {
   width: 21rem;
@@ -653,6 +743,7 @@ html {
 .HomeSection14Div {
   width: 21rem;
   height: 28rem;
+  
 }
 
 #HomeSection15 {
@@ -683,9 +774,17 @@ html {
 .HomeSection16Div {
   margin: 20px;
 }
+#HomeSection16{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .container {
   border: 1px solid rgb(230, 224, 224);
-  margin: 0rem 7rem 4rem 7rem;
+  /* width: 93%;
+  margin: 0% 7%; */
+  width: 70rem;
+  margin: 2rem;
   padding-top: 1rem;
   border-radius: 15px;
 }
@@ -716,8 +815,13 @@ html {
 /* ------------------ */
 
 /* Footer.jsx -------------------------------- */
-.Footer {
+.Fotter{
   display: flex;
+  justify-content: center;
+}
+.FotterDiv {
+  display: flex;
+  width: 72rem;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
@@ -864,645 +968,35 @@ background-color: rgb(246, 238, 228);
 }
 /* --------------------Features.js------------------------------------------------------------- */
 /* Responsive -------------max-width: 1199px--------------- */
-@media only screen and (max-width: 1199px) {
-  #HomeSection1 h1 {
-    font-size: 50px;
-  
-  }
-  .PhoneImgHome img {
-    width: 70rem;
-    height: 45rem;
-  }
-  #HomeSection2 {
-    justify-content: start;
-    align-items: start;
-    padding-left: 2rem;
-  }
-  #HomeSection2 img {
-    width: 70rem;
-    height: 60rem;
-  }
-  #HomeSection3 {
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: start;
-    align-items: start;
-    padding-left: 2rem;
-  }
-  #HomeSection3 img {
-    width: 70rem;
-    height: 60rem;
-    padding-left: 3rem;
-  }
-  #HomeSection4 {
-    width: 100%;
-    height: 93rem;
-    background-color: rgb(242, 246, 245);
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
 
-    gap: 5rem;
-    align-items: center;
-    border-radius: 16px;
-  }
-  #HomeSection4 {
-    width: calc(100% - 3rem);
-    margin: 0rem 1.5rem;
-    padding-left: 0rem;
-  }
-
-  #HomeSection4 h1 {
-    font-size: 26px;
-    font-weight: 600;
-    padding: 0rem 1.5rem;
-  }
-  #HomeSection4 h5 {
-    color: var(--text-color);
-    font-weight: 600;
-    padding: 1.5rem 1.5rem;
-  }
-  #HomeSection4 img {
-    margin-top: 5rem;
-    width: 72rem;
-    height: 70rem;
-  }
-  .HomeSection6 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: calc(100% - 14rem);
-    height: 120rem;
-    margin: 0rem 6.5rem;
-  }
-  .HomeSection6 h1 {
-    font-size: 20px;
-    padding-bottom: 2rem;
-  }
-
-  .card {
-    margin: 10px;
-    padding: 10px;
-    cursor: pointer;
-  }
-
-  .card img {
-    width: 72rem;
-    height: 70rem;
-  }
-  .texts {
-    width: 70rem;
-    height: 5rem;
-  }
-  #HomeSection7 {
-    width: calc(100% - 6rem);
-    height: 90rem;
-    background-color: rgb(242, 246, 245);
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: start;
-    align-items: start;
-    margin: 0rem 3rem;
-    padding-left: 5rem;
-  }
-  #HomeSection7 h1 {
-    font-size: 32px;
-    font-weight: 600;
-  }
-  #HomeSection7 h5 {
-    color: var(--text-color);
-    font-weight: 500;
-    padding: 1rem 0rem;
-    font-size: 16px;
-  }
-  #HomeSection7 img {
-    width: 60rem;
-    height: 60rem;
-    margin-top: 7rem;
-    margin-right: 3rem;
-  }
-  .HomeSection7Buttons {
-    display: flex;
+@media (max-width: 768px) {
+  .NavUl {
+    display: none;
     flex-direction: column;
     gap: 1rem;
-  }
-  .HomeSection7Buttons button {
-    width: 60rem;
-    height: 3rem;
-    font-size: 16px;
-    font-weight: 500;
-    background-color: black;
-    color: white;
-    border-radius: 3rem;
-    font-family: var(--HomeSection-font-family);
-    transition: 0.3s ease-in-out;
+    background-color: white;
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: transform 0.4s ease, opacity 0.4s ease;
   }
 
-  #HomeSection9 {
-    flex-direction: column;
-    align-items: start;
-    justify-content: start;
-    gap: 3rem;
-    margin-left: 3rem;
-  }
-  #HomeSection9 .HomeSection9Card {
-    width: 60rem;
-    height: 15rem;
-  }
-  #HomeSection9 .HomeSection9Card h2 {
-    font-size: 18px;
-  }
-  #HomeSection9 .HomeSection9Card p {
-    font-size: 14px;
-    padding-top: 1rem;
-    color: var(--text-color);
-  }
-
-  #HomeSection9 .HomeSection9Card button {
-    width: 7.5rem;
-    height: 2.5rem;
-    font-size: 14px;
-    font-weight: 500;
-    background-color: rgb(237, 235, 235);
-    color: rgb(210, 79, 61);
-    border-radius: 3rem;
-    font-family: var(--HomeSection-font-family);
-    transition: 0.3s ease-in-out;
-    margin-top: 2rem;
-  }
-  /* --------- */
-  #HomeSection10 {
-    width: 100%;
-    height: 93rem;
-    background-color: rgb(242, 246, 245);
+  .NavUl.open {
     display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-
-    gap: 5rem;
-    align-items: center;
-    border-radius: 16px;
-  }
-  #HomeSection10 {
-    width: calc(100% - 3rem);
-    margin: 0rem 1.5rem;
-    padding-left: 0rem;
+    opacity: 1;
+    transform: translateY(0);
   }
 
-  #HomeSection10 h1 {
-    font-size: 26px;
-    font-weight: 600;
-    padding: 0rem 1.5rem;
-  }
-  #HomeSection10 h5 {
-    color: var(--text-color);
-    font-weight: 600;
-    padding: 1.5rem 1.5rem;
-  }
-  #HomeSection10 img {
-    margin-top: 5rem;
-    width: 72rem;
-    height: 70rem;
-  }
-  /* --------- */
-  #HomeSection11 {
-    align-items: start;
-    justify-content: start;
-    flex-direction: column;
-    margin: 1.5rem 0rem 5rem 2rem;
-  }
-  .HomeSection11Card {
-    width: 71rem;
-    height: 17rem;
-    background-color: rgb(254, 250, 233);
-    padding: 3rem 2rem 2rem 2rem;
+  .burger-menu {
     display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    border-radius: 15px;
-  }
-  .HomeSection11Card:first-child {
-    background-color: rgb(242, 246, 245);
-  }
-  .HomeSection11Card h3 {
-    font-size: 16px;
-    color: var(--text-color);
-  }
-  .HomeSection11Card h2 {
-    font-size: 18px;
-  }
-  .HomeSection11Card p {
-    font-size: 16px;
-    color: var(--text-color);
-  }
-  #HomeSection12 h2 {
-    font-size: 25px;
-    font-weight: 600;
-  }
-  .countersCon {
-    flex-direction: column;
-    gap: 4.5rem;
   }
 }
-/* Responsive -------------max-width: 1199px--------------- */
-  /* Responsive -------------max-width: 1024px--------------- */
-
-    /* @media only screen and (max-width:640px) {
-    #HomeSection1{
-      margin-top: 5rem;
-      padding-left: 17rem;
-      width: 100%;
-      background-color: red;
-    }
-    #HomeSection1 h1{
-    font-size: 60px;
-    padding-bottom: 1.5rem;
-    }
-    #HomeSection1 p{
-      font-size: 21px;
-      }   
-      #HomeSection1 .HomeButtons button {
-        width: 13rem;
-        height: 4rem;
-        font-size: 18px;
-       margin-top: 1rem;
-      }
-    
-   }  */
-   @media only screen and (max-width: 1024px) {
-    body{
-      background-color: aqua;
-
-    }
-    #HomeSection1{
-      margin-top: 5rem;
-    }
-    #HomeSection1 h1{
-    font-size: 48px;
-    font-weight: 400;
-    padding-bottom: 1.2rem;
-    }
-    #HomeSection1 p{
-      font-size: 16px;
-      font-weight: 400;
-      }   
-      #HomeSection1 .HomeButtons button {
-        width: 10rem;
-        height: 3rem;
-        font-size: 15px;
-        font-weight: 600;
-      }
-    .PhoneImgHome img {
-      /* width: 70rem;
-      height: 45rem; */
-      width: 55rem;
-      height: 100%;
-    }
-    .carousel{
-      width: 60rem;
-      height: 6rem;
-      margin-bottom: 3rem;
-      }
-    #HomeSection1 {
-      width: 100%;
-      height: 74rem;
-
-    }
-    #HomeSection2 {
-      justify-content: start;
-      align-items: start;
-      padding-left: 0.8rem;
-    }
-    #HomeSection2 img {
-      width: 60rem;
-      height: 55rem;
-      margin-left: 1rem;
-    
-    }
-   
-    #HomeSection3 {
-      display: flex;
-      flex-direction: column-reverse;
-      justify-content: start;
-      align-items: start;
-      }
-    #HomeSection2 article{
-      margin-left: 1rem;
-
-    }
-  
-    #HomeSection3 img {
-      width: 60rem;
-      height: 55rem;
-      background-color: rgb(245, 245, 247);
-
-    }
-    #HomeSection4 {
-      width: 59rem;
-      height: 86rem;
-      background-color: rgb(242, 246, 245);
-      display: flex;
-      flex-direction: column-reverse;
-      justify-content: center;
-      margin-left:2rem;
-      padding-left: 0rem;
-      gap: 5rem;
-      align-items: center;
-      border-radius: 16px;
-    }
-    
-  
-    #HomeSection4 h1 {
-      font-size: 26px;
-      font-weight: 600;
-      padding: 0rem 1.5rem;
-    }
-    #HomeSection4 h5 {
-      color: var(--text-color);
-      font-weight: 600;
-      padding: 1.5rem 1.5rem;
-    }
-    #HomeSection4 img {
-      margin-top: 5rem;
-      width: 60rem;
-      height: 64rem;
-    }
-  
-    .HomeSection6 {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: start;
-      width:60rem;
-      height: 85rem;
-      margin: 0rem 1.6rem;
-    }
-    .HomeSection6 h1 {
-      font-size: 20px;
-      padding-bottom: 2rem;
-    }
-  
-    .card {
-      
-      padding: 10px;
-      cursor: pointer;
-    }
-  
-    .card img {
-      width: 59rem;
-      height: 53rem;
-    }
-    .texts {
-      width: 59rem;
-      height: 5rem;
-
-    }
-    #HomeSection7 {
-      width: 59rem;
-      height: 83rem;
-      background-color: rgb(242, 246, 245);
-      display: flex;
-      flex-direction: column-reverse;
-      justify-content: center;
-      align-items: center;
-      margin: 0rem 2rem;
-      padding-left: 0rem;
-      border-radius: 15px;
-      gap: 0rem;
-    }
-    #HomeSection7 h1 {
-      font-size: 32px;
-      font-weight: 600;
-    }
-    #HomeSection7 h5 {
-      color: var(--text-color);
-      font-weight: 500;
-      padding: 1rem 0rem;
-      font-size: 16px;
-    }
-    #HomeSection7 img {
-      width: 80%;
-      height: 60rem;
-      margin-top: 5rem;
-      margin-right: 7rem;
-    }
-  
-    
-    .HomeSection7Buttons {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      /* margin-right: 4rem; */
-    }
-    .HomeSection7Buttons button {
-      width: 56rem;
-      height: 3rem;
-      font-size: 16px;
-      font-weight: 500;
-      background-color: black;
-      color: white;
-      border-radius: 3rem;
-      font-family: var(--HomeSection-font-family);
-      transition: 0.3s ease-in-out;
-    }
-    #HomeSection8 {
-      margin-left: 2rem;
-    }
-    #HomeSection9 {
-      flex-direction: column;
-      align-items: start;
-      justify-content: start;
-      gap: 3rem;
-      margin-left: 2rem;
-    }
-    #HomeSection9 .HomeSection9Card {
-      width: 60rem;
-      height: 15rem;
-    }
-    #HomeSection9 .HomeSection9Card h2 {
-      font-size: 18px;
-    }
-    #HomeSection9 .HomeSection9Card p {
-      font-size: 14px;
-      padding-top: 1rem;
-      color: var(--text-color);
-    }
-  
-    #HomeSection9 .HomeSection9Card button {
-      width: 7.5rem;
-      height: 2.5rem;
-      font-size: 14px;
-      font-weight: 500;
-      background-color: rgb(237, 235, 235);
-      color: rgb(210, 79, 61);
-      border-radius: 3rem;
-      font-family: var(--HomeSection-font-family);
-      transition: 0.3s ease-in-out;
-      margin-top: 2rem;
-    }
-    
-    #HomeSection10 {
-      width: 60rem;
-      height: 93rem;
-      background-color: rgb(242, 246, 245);
-      display: flex;
-      flex-direction: column-reverse;
-      justify-content: center;
-  
-      gap: 5rem;
-      align-items: center;
-      border-radius: 16px;
-    }
-    #HomeSection10 {
-      width: calc(100% - 3rem);
-      margin: 0rem 1.5rem;
-      padding-left: 0rem;
-      height: 80rem;
-    }
-    #HomeSection10 article {
-      margin-bottom: 2rem;
-    }
-    #HomeSection10 h1 {
-      font-size: 26px;
-      font-weight: 600;
-      padding: 0rem 1.5rem;
-    }
-    #HomeSection10 h5 {
-      color: var(--text-color);
-      font-weight: 600;
-      padding: 0rem 1.5rem;
-    }
-    #HomeSection10 img {
-      margin-top: 3rem;
-      width: 60rem;
-      height: 70rem;
-    }
-    #HomeSection11 {
-      align-items: start;
-      justify-content: start;
-      flex-direction: column;
-      margin: 1.5rem 0rem 5rem 1.5rem;
-    }
-    .HomeSection11Card {
-      width: 60rem;
-      height: 17rem;
-      background-color: rgb(254, 250, 233);
-      padding: 3rem 2rem 2rem 1.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      border-radius: 15px;
-    }
-    .HomeSection11Card:first-child {
-      background-color: rgb(242, 246, 245);
-    }
-    .HomeSection11Card h3 {
-      font-size: 16px;
-      color: var(--text-color);
-    }
-    .HomeSection11Card h2 {
-      font-size: 18px;
-    }
-    .HomeSection11Card p {
-      font-size: 16px;
-      color: var(--text-color);
-    }
-    #HomeSection12 h2 {
-      font-size: 25px;
-      font-weight: 600;
-    }
-    .countersCon {
-      flex-direction: column;
-      gap: 4.5rem;
-    }
-    #HomeSection13 {
-      display: flex;
-      justify-content: space-between;
-      padding: 0rem 3rem 3rem 3rem;
-    }
-    #HomeSection13 button {
-      width: 5.5rem;
-      height: 2.5rem;
-      border-radius: 20px;
-      font-weight: 600;
-      color: rgb(210, 79, 61);
-      transition: 0.5s;
-    }
-    #HomeSection13 button:hover {
-      background-color: rgb(210, 79, 61);
-      color: white;
-    }
-    #HomeSection13 h4 {
-      color: var(--text-color);
-      letter-spacing: 5px;
-      font-weight: 500;
-      font-size: 14px;
-      padding-bottom: 1rem;
-    }
-    #HomeSection14 {
-      display: flex;
-      flex-wrap: nowrap;
-      width: 100%;
-      align-items: center;
-      justify-content: center;
-      overflow-x: auto;
-      gap: 1.5rem;
-    }
-    #HomeSection14 img {
-      width: 21rem;
-      height: 20rem;
-    }
-    #HomeSection14 h2 {
-      font-size: 18px;
-    }
-    #HomeSection14 p {
-      padding: 0.7rem 0rem;
-    }
-    .HomeSection14Div {
-      width: 21rem;
-      height: 28rem;
-    }
-
-    #HomeSection15 h2 {
-      font-size: 28px;
-    }
-    
-    .HomeSection16Div {
-      margin: 20px;
-    }
-    .container {
-      border: 1px solid rgb(230, 224, 224);
-      margin: 0rem 7rem 4rem 7rem;
-      padding-top: 1rem;
-      border-radius: 15px;
-    }
-    .question {
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      font-size: 16px;
-      color: red;
-    }
-    
-    .plus-icon {
-      margin-left: 10px;
-      font-size: 32px;
-      font-weight: bold;
-      padding-right: 1.5rem;
-    }
-    
-    .answer {
-      margin-top: 10px;
-      margin-bottom: 10px;
-    }
-    .question-container {
-      padding: 0rem 3.5rem 1rem 1.5rem;
-      margin: 0rem 2rem 2rem 2rem;
-      border-bottom: 1px solid rgb(232, 228, 228);
-    }
-  } 
- 
-  /* -------------------------------1024 --------------------------- */
-
-
+/* @media only screen and (max-width: 1800px) {
+body{
+  background-color: red;
+}
+} */

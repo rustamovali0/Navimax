@@ -33,32 +33,37 @@ const Home = () => {
   const questionsAndAnswers = [
     {
       question: "What kind of teeth treatments do you offer?",
-      answer: "We offer a variety of teeth treatments, including dental cleanings, teeth whitening, fillings, root canals, crowns, and bridges."
+      answer:
+        "We offer a variety of teeth treatments, including dental cleanings, teeth whitening, fillings, root canals, crowns, and bridges.",
     },
     {
       question: "How often should I get a dental check-up?",
-      answer: "It is recommended to get a dental check-up every six months to ensure optimal oral health."
+      answer:
+        "It is recommended to get a dental check-up every six months to ensure optimal oral health.",
     },
     {
       question: "What is teeth whitening and how does it work?",
-      answer: "Teeth whitening is a cosmetic treatment that uses bleach or other materials to lighten the color of your teeth. It works by breaking down the stains on your teeth and removing them."
+      answer:
+        "Teeth whitening is a cosmetic treatment that uses bleach or other materials to lighten the color of your teeth. It works by breaking down the stains on your teeth and removing them.",
     },
     {
       question: "What should I do if I have a toothache?",
-      answer: "If you have a toothache, it is important to schedule an appointment with your dentist as soon as possible. In the meanwhile, you can try rinsing your mouth with warm salt water, taking pain medication as directed, and avoiding hot or cold foods and drinks."
+      answer:
+        "If you have a toothache, it is important to schedule an appointment with your dentist as soon as possible. In the meanwhile, you can try rinsing your mouth with warm salt water, taking pain medication as directed, and avoiding hot or cold foods and drinks.",
     },
     {
       question: "How long do dental implants last?",
-      answer: "With proper care, dental implants can last a lifetime. However, the actual lifespan of dental implants may vary depending on several factors, including the patient's oral health habits and the quality of the implant and crown materials used."
-    }
+      answer:
+        "With proper care, dental implants can last a lifetime. However, the actual lifespan of dental implants may vary depending on several factors, including the patient's oral health habits and the quality of the implant and crown materials used.",
+    },
   ];
 
   const [openIndexes, setOpenIndexes] = useState([]);
 
   const toggleAnswer = (index) => {
-    setOpenIndexes(prevIndexes => {
+    setOpenIndexes((prevIndexes) => {
       if (prevIndexes.includes(index)) {
-        return prevIndexes.filter(i => i !== index);
+        return prevIndexes.filter((i) => i !== index);
       } else {
         return [...prevIndexes, index];
       }
@@ -159,48 +164,53 @@ const Home = () => {
         </div>
       </section>
       <section id="HomeSection2" className="slide-up-delay-5">
-        <img src={ChatImg} alt="" />
-        <article>
-          <h5>BENEFITS</h5>
-          <h1>
-            Save time and money with 
-            our <br /> powerful tools
-          </h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius
-            <br /> enim in eros elementum tristique.
-          </p>
-          <button>Get In Touch</button>
-        </article>
+        <div className="HomeSection2Div">
+          <img src={ChatImg} alt="" />
+          <article>
+            <h5>BENEFITS</h5>
+            <h1>
+              Save time and money with our <br /> powerful tools
+            </h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius
+              <br /> enim in eros elementum tristique.
+            </p>
+            <button>Get In Touch</button>
+          </article>
+        </div>
       </section>
       <section id="HomeSection3" className="slide-up-delay-6">
-        <article>
-          <h5>BENEFITS</h5>
-          <h1>
-            More then 7000+ Doctors are <br />
-            members of Mobi
-          </h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            varius <br />
-            
-            enim in eros elementum tristique.
-          </p>
-          <button>Download App-Free</button>
-        </article>
-        <img src={UserImg} alt=""/>
+        <div className="HomeSection3Div">
+          <article>
+            <h5>BENEFITS</h5>
+            <h1>
+              More then 7000+ Doctors are <br />
+              members of Mobi
+            </h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius <br />
+              enim in eros elementum tristique.
+            </p>
+            <button>Download App-Free</button>
+          </article>
+          <img src={UserImg} alt="" />
+        </div>
       </section>
       <section id="HomeSection4" className="slide-up-delay-7">
-        <article>
-          <h5>Emily L.</h5>
-          <h1>
-            “I had tried every teeth whitening product out there, but nothing
-            seemed to work. After just one session with Mobi, my teeth were
-            multiple shades whiter. I couldn’t believe it!”
-          </h1>
-          <h5>5-star review from App Store</h5>
-        </article>
-        <img src={Girl1} alt="" />
+        <div className="HomeSection4Div">
+          <article>
+            <h5>Emily L.</h5>
+            <h1>
+              “I had tried every teeth whitening product out there, but nothing
+              seemed to work. After just one session with Mobi, my teeth were
+              multiple shades whiter. I couldn’t believe it!”
+            </h1>
+            <h5>5-star review from App Store</h5>
+          </article>
+          <img src={Girl1} alt="" />
+        </div>
       </section>
       <section id="HomeSection5" className="slide-up-delay-8">
         <h4>HOW IT WORKS</h4>
@@ -216,103 +226,115 @@ const Home = () => {
         </p>
       </section>
       <div className="HomeSection6">
-        <div className="card">
-          <Card image={images[imageIndex]} />
-        </div>
-        <div className="texts">
-          {texts.map((item, index) => (
-            <div key={index} className="textsCon">
-              <h1 onClick={() => handleTextClick(index)}>{item.text}</h1>
-              {selectedText === index && (
-                <>
-                  <p>{item.description}</p>
-                  <button>Learn More</button>
-                </>
-              )}
-            </div>
-          ))}
+        <div className="HomeSection6Div">
+          <div className="card">
+            <Card image={images[imageIndex]} />
+          </div>
+          <div className="texts">
+            {texts.map((item, index) => (
+              <div key={index} className="textsCon">
+                <h1 onClick={() => handleTextClick(index)}>{item.text}</h1>
+                {selectedText === index && (
+                  <>
+                    <p>{item.description}</p>
+                    <button>Learn More</button>
+                  </>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
       <section id="HomeSection7">
-        <article>
-          <h1>Download our Mobi app to get started now</h1>
-          <h5>
-            Zero code, maximum speed. Make professional sites easy, fast and fun
-            while delivering best-in-class SEO, performance.
-          </h5>
-          <div className="HomeSection7Buttons">
-            <button>App store</button>
-            <button>Google Play</button>
+        <div className="HomeSection7Div">
+          {" "}
+          <article>
+            <h1>Download our Mobi app to get started now</h1>
+            <h5>
+              Zero code, maximum speed. Make professional sites easy, fast and
+              fun while delivering best-in-class SEO, performance.
+            </h5>
+            <div className="HomeSection7Buttons">
+              <button>App store</button>
+              <button>Google Play</button>
+            </div>
+          </article>
+          <div className="HomeSection7Img">
+            <img src={PhoneImg} alt="" />
           </div>
-        </article>
-        <div className="HomeSection7Img">
-          <img src={PhoneImg} alt="" />
         </div>
       </section>
       <section id="HomeSection8">
-        <h4>BENEFITS</h4>
-        <h1>
-          Straighten your teeth without braces
-          <br />
-          with our Clear Aligners
-        </h1>
-        <p>
-          Are you looking for a discreet and comfortable way to straighten your
-          teeth? Our teeth treatment
-          <br />
-          services offer clear aligners that are virtually invisible, perfect
-          for busy individuals who want to improve their smile.
-        </p>
+        <article>
+          {" "}
+          <h4>BENEFITS</h4>
+          <h1>
+            Straighten your teeth without braces
+            <br />
+            with our Clear Aligners
+          </h1>
+          <p>
+            Are you looking for a discreet and comfortable way to straighten
+            your teeth? Our teeth treatment
+            <br />
+            services offer clear aligners that are virtually invisible, perfect
+            for busy individuals who want to improve their smile.
+          </p>
+        </article>
       </section>
       <section id="HomeSection9">
-        <div className="HomeSection9Card">
-          <img src={tooth1} alt="" />
-          <h2>Maximize your control with Mobi</h2>
-          <p>
-            Precise and predictable technology. We can show the result you can
-            expect before the treatment even starts.
-          </p>
-          <button>Learn More</button>
-        </div>
-        <div className="HomeSection9Card">
-          <img src={tooth2} alt="" />
-          <h2>Maximize your control with Mobi</h2>
-          <p>
-            Precise and predictable technology. We can show the result you can
-            expect before the treatment even starts.
-          </p>
-          <button>Learn More</button>
-        </div>
-        <div className="HomeSection9Card">
-          <img src={tooth3} alt="" />
-          <h2>Maximize your control with Mobi</h2>
-          <p>
-            Precise and predictable technology. We can show the result you can
-            expect before the treatment even starts.
-          </p>
-          <button>Learn More</button>
-        </div>
-        <div className="HomeSection9Card">
-          <img src={tooth4} alt="" />
-          <h2>Maximize your control with Mobi</h2>
-          <p>
-            Precise and predictable technology. We can show the result you can
-            expect before the treatment even starts.
-          </p>
-          <button>Learn More</button>
+        <div className="HomeSection9Div">
+          <div className="HomeSection9Card">
+            <img src={tooth1} alt="" />
+            <h2>Maximize your control with Mobi</h2>
+            <p>
+              Precise and predictable technology. We can show the result you can
+              expect before the treatment even starts.
+            </p>
+            <button>Learn More</button>
+          </div>
+          <div className="HomeSection9Card">
+            <img src={tooth2} alt="" />
+            <h2>Maximize your control with Mobi</h2>
+            <p>
+              Precise and predictable technology. We can show the result you can
+              expect before the treatment even starts.
+            </p>
+            <button>Learn More</button>
+          </div>
+          <div className="HomeSection9Card">
+            <img src={tooth3} alt="" />
+            <h2>Maximize your control with Mobi</h2>
+            <p>
+              Precise and predictable technology. We can show the result you can
+              expect before the treatment even starts.
+            </p>
+            <button>Learn More</button>
+          </div>
+          <div className="HomeSection9Card">
+            <img src={tooth4} alt="" />
+            <h2>Maximize your control with Mobi</h2>
+            <p>
+              Precise and predictable technology. We can show the result you can
+              expect before the treatment even starts.
+            </p>
+            <button>Learn More</button>
+          </div>
         </div>
       </section>
       <section id="HomeSection10">
-        <article>
-          <h5>Sarah T.</h5>
-          <h1>
-            “I was always self-conscious about my smile, but after getting teeth
-            treatment from Mobi, I can’t stop grinning! My teeth look and feel
-            amazing.”
-          </h1>
-          <h5>5-star review from App Store</h5>
-        </article>
-        <img src={Girl2} alt="" />
+        <div className="HomeSection10Div">
+          <article>
+            <h5>Sarah T.</h5>
+            <h1>
+              “I was always self-conscious about my smile, but after getting
+              teeth treatment from Mobi, I can’t stop grinning! My teeth look
+              and feel amazing.”
+            </h1>
+            <h5>5-star review from App Store</h5>
+          </article>
+          <img src={Girl2} alt="" />
+        </div>
       </section>
       <section id="HomeSection11">
         <div className="HomeSection11Card">
@@ -353,29 +375,33 @@ const Home = () => {
         </div>
       </section>
       <section id="HomeSection13">
-        <div className="HomeSection13Div">
-          <h4>BLOG</h4>
-          <h2>Get the latest news</h2>
-        </div>
-        <div className="HomeSection13Div">
-          <button>See All</button>
+        <div className="HomeSection13DivCon">
+          <div className="HomeSection13Div">
+            <h4>BLOG</h4>
+            <h2>Get the latest news</h2>
+          </div>
+          <div className="HomeSection13Div">
+            <button>See All</button>
+          </div>
         </div>
       </section>
       <section id="HomeSection14">
-        <div className="HomeSection14Div">
-          <img src={PlantsImg1} alt="" />
-          <p>Apr 8, 2022</p>
-          <h2>Starting and Growing a Career in Web Design</h2>
-        </div>
-        <div className="HomeSection14Div">
-          <img src={PlantsImg2} alt="" />
-          <p>Mar 15, 2022</p>
-          <h2>Create a Landing Page That Performs Great</h2>
-        </div>
-        <div className="HomeSection14Div">
-          <img src={PlantsImg3} alt="" />
-          <p>Feb 28, 2022</p>
-          <h2>How Can Designers Prepare for the Future?</h2>
+        <div className="HomeSection14DivCon">
+          <div className="HomeSection14Div">
+            <img src={PlantsImg1} alt="" />
+            <p>Apr 8, 2022</p>
+            <h2>Starting and Growing a Career in Web Design</h2>
+          </div>
+          <div className="HomeSection14Div">
+            <img src={PlantsImg2} alt="" />
+            <p>Mar 15, 2022</p>
+            <h2>Create a Landing Page That Performs Great</h2>
+          </div>
+          <div className="HomeSection14Div">
+            <img src={PlantsImg3} alt="" />
+            <p>Feb 28, 2022</p>
+            <h2>How Can Designers Prepare for the Future?</h2>
+          </div>
         </div>
       </section>
       <section id="HomeSection15">
@@ -389,21 +415,21 @@ const Home = () => {
         </p>
       </section>
       <section id="HomeSection16">
-      <div className="container">
-      {questionsAndAnswers.map((qa, index) => (
-        <div key={index} className="question-container">
-          <div className="question" onClick={() => toggleAnswer(index)}>
-          <span className="plus-icon">{openIndexes.includes(index) ? 'x' : '+'}</span>
-            <span>{qa.question}</span>
-          </div>
-          {openIndexes.includes(index) && (
-            <div className="answer">
-              {qa.answer}
+        <div className="container">
+          {questionsAndAnswers.map((qa, index) => (
+            <div key={index} className="question-container">
+              <div className="question" onClick={() => toggleAnswer(index)}>
+                <span className="plus-icon">
+                  {openIndexes.includes(index) ? "x" : "+"}
+                </span>
+                <span>{qa.question}</span>
+              </div>
+              {openIndexes.includes(index) && (
+                <div className="answer">{qa.answer}</div>
+              )}
             </div>
-          )}
+          ))}
         </div>
-      ))}
-    </div>
       </section>
     </div>
   );

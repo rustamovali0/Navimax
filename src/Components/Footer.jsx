@@ -2,8 +2,9 @@ import React from 'react'
 import Mobi_Logo from '../Asserts/Mobi_Logo.png'
 const Fotter = () => {
   return (
-    <div>
-     <div className="Footer">
+    <div className='Fotter'>
+
+     <div className="FotterDiv">
   <img src={Mobi_Logo} alt="Mobi Logo" className="footer-logo" />
   <div className="iconsFooter">
     A A A
