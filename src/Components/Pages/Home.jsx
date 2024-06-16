@@ -69,6 +69,7 @@ const Home = () => {
       }
     });
   };
+  
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) =>

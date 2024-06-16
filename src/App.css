@@ -156,6 +156,14 @@ html {
   display: flex;
   animation: spin 30s linear infinite;
 }
+.slides1 {
+  display: flex;
+  animation: spin 30s linear infinite;
+}
+.slides2 {
+  display: flex;
+  animation: spin1 30s linear infinite;
+}
 
 .slide {
   flex: 0 0 calc(25% - 3rem);
@@ -179,6 +187,14 @@ html {
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+@keyframes spin1 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(90%);
   }
 }
 
@@ -863,15 +879,13 @@ html {
   align-items: center;
   justify-content: center;
   background-color: rgb(246, 246, 247);
-
 }
-#FeaturesSection1  article {
+#FeaturesSection1 article {
   padding: 0rem 19rem;
   height: 34.3rem;
   padding-top: 12rem;
   padding-left: 6rem;
   font-family: var(--HomeSection-font-family);
-  
 }
 
 #FeaturesSection1 h1 {
@@ -884,7 +898,6 @@ html {
   font-size: 16px;
   color: var(--navbar-color);
 }
-
 
 #FeaturesSection1 .HomeButtons button {
   width: 10rem;
@@ -961,6 +974,160 @@ html {
   color: white;
 }
 /* --------------------Features.js------------------------------------------------------------- */
+/* ------------------------------------Testimodal.js------------------------------------------- */
+#TestimonialSection1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 5rem;
+}
+.TestimonialSection1Card {
+  width: 35rem;
+  height: 17rem;
+  padding: 3rem 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-radius: 15px;
+}
+
+.TestimonialSection1Card h3 {
+  font-size: 16px;
+  color: var(--text-color);
+}
+.TestimonialSection1Card h2 {
+  font-size: 18px;
+}
+.TestimonialSection1Card p {
+  font-size: 16px;
+  color: var(--text-color);
+}
+.TestimonialSection1Card1{
+  background-color: rgb(242, 246, 245);
+}
+.TestimonialSection1Card2{
+  background-color: rgb(254, 250, 233);
+}
+.TestimonialSection1Card3{
+  background-color: rgb(246, 246, 247);
+}
+.TestimonialSection1Card4{
+  background-color: rgb(242, 245, 249);
+}
+/* ------------------------------------Testimodal.js------------------------------------------- */
+
+/* ---------------------------------------Blog.jsx------------------------------------------------ */
+#BlogSection1 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  background-color: rgb(246, 246, 247);
+}
+#BlogSection1 article {
+  padding: 0rem 7rem;
+  height: 24.3rem;
+  padding-top: 12rem;
+  font-family: var(--HomeSection-font-family);
+}
+
+#BlogSection1 h1 {
+  font-size: 63px;
+  font-weight: 400;
+  line-height: 70px;
+  padding-bottom: 2rem;
+}
+#BlogSection1 p {
+  font-size: 16px;
+  color: var(--navbar-color);
+}
+
+
+
+#BlogSection14 {
+  padding: 0rem 3rem;
+  margin-top: 4rem;
+}
+.BlogSection14DivCon {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: start;
+  gap: 1.5rem;
+}
+#BlogSection14 img {
+  width: 21rem;
+  height: 20rem;
+  border-radius: 15px;
+}
+#BlogSection14 h2 {
+  font-size: 18px;
+}
+#BlogSection14 p {
+  padding: 0.7rem 0rem;
+}
+.BlogSection14Div {
+  width: 21rem;
+  height: 28rem;
+}
+
+
+
+/* ---------------------------------------Blog.jsx------------------------------------------------ */
+/* ---------------------------------------Contact.jsx------------------------------------------------ */
+#ContactSection1 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(246, 246, 247);
+}
+#ContactSection1 article {
+  padding: 0rem 19rem;
+  height: 34.3rem;
+  padding-top: 12rem;
+  padding-left: 6rem;
+  font-family: var(--HomeSection-font-family);
+}
+
+#ContactSection1 h1 {
+  font-size: 63px;
+  font-weight: 400;
+  line-height: 70px;
+  padding-bottom: 2rem;
+}
+#ContactSection1 p {
+  font-size: 16px;
+  color: var(--navbar-color);
+}
+
+#ContactSection1 .ContactButtons button {
+  width: 10rem;
+  height: 3rem;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: black;
+  color: white;
+  border-radius: 3rem;
+  font-family: var(--HomeSection-font-family);
+  transition: 0.3s ease-in-out;
+}
+#ContactSection1 .HomeButtons button:hover {
+  background-color: rgb(210, 79, 61);
+  color: white;
+}
+#ContactSection1 .HomeButtons button:first-child {
+  margin-right: 1rem;
+}
+#ContactSection1 .HomeButtons {
+  margin-top: 2rem;
+}
+/* ---------------------------------------Contact.jsx------------------------------------------------ */
+
 /* Responsive -------------max-width: 1199px--------------- */
 
 @media only screen and (max-width: 1199px) {
@@ -1037,14 +1204,12 @@ html {
     width: 73rem;
     align-items: start;
     margin: 0rem 2rem;
-
   }
- 
+
   #HomeSection2 img {
-    width:100%;
+    width: 100%;
     height: 55rem;
     margin-top: 2.5rem;
-
   }
 
   #HomeSection2 h1 {
@@ -1058,11 +1223,10 @@ html {
     width: 73rem;
     align-items: start;
     margin: 0rem 2rem;
-
   }
- 
+
   #HomeSection3 img {
-    width:100%;
+    width: 100%;
     height: 55rem;
     margin-top: 2.5rem;
   }
@@ -1079,7 +1243,7 @@ html {
     padding-left: 0rem;
     margin-top: 2rem;
   }
-  #HomeSection4 article{
+  #HomeSection4 article {
     padding: 0rem 2rem;
   }
 
@@ -1110,7 +1274,7 @@ html {
   .card {
     width: 100%;
   }
-  
+
   .card img {
     width: 100%;
     height: 45rem;
@@ -1124,7 +1288,7 @@ html {
   .description {
     margin-top: 20px;
   }
-  
+
   .description p {
     font-size: 18px;
     color: #333;
@@ -1141,7 +1305,6 @@ html {
     align-items: start;
     margin: 0rem 2rem;
     padding-left: 0rem;
-
   }
   #HomeSection7 h1 {
     font-size: 32px;
@@ -1153,10 +1316,9 @@ html {
     padding: 1.5rem 0rem;
     font-size: 16px;
   }
-  #HomeSection7 article{
+  #HomeSection7 article {
     padding: 2rem;
     width: 100%;
-
   }
   #HomeSection7 img {
     height: 50rem;
@@ -1164,16 +1326,16 @@ html {
     margin-top: 2.5rem;
     padding: 0% 8rem;
   }
-  .HomeSection7Buttons{
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
+  .HomeSection7Buttons {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
   .HomeSection7Buttons button {
-    width:100%;
+    width: 100%;
     height: 3rem;
     font-size: 18px;
   }
@@ -1187,18 +1349,18 @@ html {
   #HomeSection8 article {
     width: 100%;
   }
-  #HomeSection8 h1{
+  #HomeSection8 h1 {
     font-size: 1.6rem;
     font-weight: 600;
   }
   /* -------------------------------------------------------------- */
   .HomeSection9Grid {
     grid-template-columns: 1fr;
-}
+  }
 
-.HomeSection9Card {
+  .HomeSection9Card {
     width: 100%;
-}
+  }
   /* --------------------------------------------------------- */
   .HomeSection10Div {
     width: 100%;
@@ -1208,7 +1370,7 @@ html {
     padding-left: 0rem;
     margin-top: 2rem;
   }
-  #HomeSection10 article{
+  #HomeSection10 article {
     padding: 0rem 2rem;
   }
 
@@ -1234,6 +1396,19 @@ html {
     gap: 2rem;
     border-radius: 15px;
   }
+  #TestimonialSection1 {
+    margin: 2rem 2rem 0rem 2rem;
+  }
+  .TestimonialSection1Card {
+    width: 100%;
+    height: 15rem;
+    background-color: rgb(254, 250, 233);
+    padding: 3rem 2rem 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border-radius: 15px;
+  }
   /* --------------------------------------------------------------- */
   .countersCon {
     display: flex;
@@ -1242,13 +1417,15 @@ html {
     gap: 5rem;
     flex-wrap: wrap;
   }
+  .BlogSection14DivCon {
+    justify-content: center;
+  }
 }
 
 @media only screen and (max-width: 760px) {
   .PhoneImgHome img {
     width: 80%;
     height: auto;
-   
   }
   .carousel {
     position: relative;
