@@ -147,7 +147,7 @@ html {
 .carousel {
   position: relative;
   overflow: hidden;
-  width: 55%;
+  width: 80%;
   max-width: 100%;
   margin: 0 auto;
 }
@@ -477,9 +477,10 @@ html {
   font-size: 16px;
 }
 #HomeSection7 img {
-  height: 29rem;
+  height: 25rem;
   width: 30rem;
-  margin-top: 2.5rem;
+  margin-top: 3rem;
+  padding-right: 2rem;
 }
 
 .HomeSection7Buttons button {
@@ -530,34 +531,37 @@ html {
 #HomeSection8 p {
   color: var(--text-color);
 }
-.HomeSection9Div {
-  width: 72rem;
-  height: auto;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 0rem 3rem;
-  gap: 3rem;
-}
 #HomeSection9 {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 3rem;
 }
-#HomeSection9 .HomeSection9Card {
-  width: 31rem;
-  margin: 1rem 0rem;
+
+.HomeSection9Grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  width: 100%;
+  max-width: 72rem;
+}
+
+.HomeSection9Card {
+  width: 100%;
   height: 15rem;
+  margin: 1rem 0rem;
 }
-#HomeSection9 .HomeSection9Card h2 {
+
+.HomeSection9Card h2 {
   font-size: 18px;
 }
-#HomeSection9 .HomeSection9Card p {
+
+.HomeSection9Card p {
   font-size: 14px;
   color: var(--text-color);
 }
 
-#HomeSection9 .HomeSection9Card button {
+.HomeSection9Card button {
   width: 7.5rem;
   height: 2.5rem;
   font-size: 14px;
@@ -569,10 +573,12 @@ html {
   transition: 0.3s ease-in-out;
   margin-top: 2rem;
 }
-#HomeSection9 .HomeSection9Card button:hover {
+
+.HomeSection9Card button:hover {
   background-color: rgb(210, 79, 61);
   color: white;
 }
+
 #HomeSection10 {
   display: flex;
   align-items: center;
@@ -853,19 +859,25 @@ html {
 /* -----------------Features.js--------------------------------------------------------------- */
 #FeaturesSection1 {
   width: 100%;
-  height: 34.3rem;
-  background-color: rgb(246, 246, 247);
   display: flex;
-  flex-direction: column;
-  align-items: start;
-  padding-top: 5rem;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(246, 246, 247);
+
+}
+#FeaturesSection1  article {
+  padding: 0rem 19rem;
+  height: 34.3rem;
+  padding-top: 12rem;
   padding-left: 6rem;
   font-family: var(--HomeSection-font-family);
+  
 }
+
 #FeaturesSection1 h1 {
   font-size: 63px;
   font-weight: 400;
-  line-height: 65px;
+  line-height: 70px;
   padding-bottom: 2rem;
 }
 #FeaturesSection1 p {
@@ -873,9 +885,7 @@ html {
   color: var(--navbar-color);
 }
 
-#FeaturesSection1 article {
-  padding-top: 5rem;
-}
+
 #FeaturesSection1 .HomeButtons button {
   width: 10rem;
   height: 3rem;
@@ -953,36 +963,7 @@ html {
 /* --------------------Features.js------------------------------------------------------------- */
 /* Responsive -------------max-width: 1199px--------------- */
 
-/* @media (max-width: 768px) {
-  .NavUl {
-    display: none;
-    flex-direction: column;
-    gap: 1rem;
-    background-color: white;
-    position: absolute;
-    top: 5rem;
-    left: 0;
-    right: 0;
-    padding: 1rem;
-    opacity: 0;
-    transform: translateY(-20px);
-    transition: transform 0.4s ease, opacity 0.4s ease;
-  }
-
-  .NavUl.open {
-    display: flex;
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  .burger-menu {
-    display: flex;
-  }
-} */
 @media only screen and (max-width: 1199px) {
-  body {
-    background-color: red;
-  }
   .NavUl {
     display: none;
     flex-direction: column;
@@ -1038,10 +1019,11 @@ html {
 
   .PhoneImgHome img {
     width: 100%;
-    height: 40rem;
+    height: auto;
     margin-bottom: 3rem;
     object-fit: cover;
     margin-top: 1rem;
+    margin: 0rem 2rem;
   }
   /* -------------------------------------------------- */
   .carousel {
@@ -1132,9 +1114,12 @@ html {
   .card img {
     width: 100%;
     height: 45rem;
+    border-radius: 25px;
+    margin-bottom: 1rem;
   }
   .HomeSection6 .texts {
     margin-left: 0rem;
+    width: 100%;
   }
   .description {
     margin-top: 20px;
@@ -1143,5 +1128,133 @@ html {
   .description p {
     font-size: 18px;
     color: #333;
+  }
+  /* ------------------------------------ */
+  .HomeSection7Div {
+    width: 100%;
+    height: auto;
+    background-color: rgb(242, 246, 245);
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: start;
+    gap: 3rem;
+    align-items: start;
+    margin: 0rem 2rem;
+    padding-left: 0rem;
+
+  }
+  #HomeSection7 h1 {
+    font-size: 32px;
+    font-weight: 600;
+  }
+  #HomeSection7 h5 {
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 1.5rem 0rem;
+    font-size: 16px;
+  }
+  #HomeSection7 article{
+    padding: 2rem;
+    width: 100%;
+
+  }
+  #HomeSection7 img {
+    height: 50rem;
+    width: 100%;
+    margin-top: 2.5rem;
+    padding: 0% 8rem;
+  }
+  .HomeSection7Buttons{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+  .HomeSection7Buttons button {
+    width:100%;
+    height: 3rem;
+    font-size: 18px;
+  }
+  .HomeSection7Buttons button:first-child {
+    margin-right: 0rem;
+  }
+  /* ----------------------------------------------------------- */
+  #HomeSection8 {
+    padding: 0rem 2rem;
+  }
+  #HomeSection8 article {
+    width: 100%;
+  }
+  #HomeSection8 h1{
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+  /* -------------------------------------------------------------- */
+  .HomeSection9Grid {
+    grid-template-columns: 1fr;
+}
+
+.HomeSection9Card {
+    width: 100%;
+}
+  /* --------------------------------------------------------- */
+  .HomeSection10Div {
+    width: 100%;
+    margin: 0rem 2rem;
+    flex-direction: column-reverse;
+    gap: 1rem;
+    padding-left: 0rem;
+    margin-top: 2rem;
+  }
+  #HomeSection10 article{
+    padding: 0rem 2rem;
+  }
+
+  #HomeSection10 h1 {
+    font-size: 28px;
+  }
+
+  #HomeSection10 img {
+    width: 100%;
+    height: 43rem;
+  }
+  /* ------------------------------------------------------- */
+  #HomeSection11 {
+    margin: 2rem 2rem 0rem 2rem;
+  }
+  .HomeSection11Card {
+    width: 100%;
+    height: 15rem;
+    background-color: rgb(254, 250, 233);
+    padding: 3rem 2rem 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border-radius: 15px;
+  }
+  /* --------------------------------------------------------------- */
+  .countersCon {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5rem;
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .PhoneImgHome img {
+    width: 80%;
+    height: auto;
+   
+  }
+  .carousel {
+    position: relative;
+    overflow: hidden;
+    width: 60%;
+    max-width: 60%;
+    margin: 0 auto;
   }
 }

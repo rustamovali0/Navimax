@@ -283,7 +283,7 @@ const Home = () => {
         </article>
       </section>
       <section id="HomeSection9">
-        <div className="HomeSection9Div">
+        <div className="HomeSection9Grid">
           <div className="HomeSection9Card">
             <img src={tooth1} alt="" />
             <h2>Maximize your control with Mobi</h2>
