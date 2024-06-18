@@ -140,6 +140,7 @@ html {
   width: 100%;
   height: 35rem;
   margin-bottom: 3rem;
+  margin-top: 2rem;
 }
 
 /* Carusel CSS  */
@@ -259,6 +260,7 @@ html {
   width: 72rem;
   margin-bottom: 5rem;
 }
+
 #HomeSection2 img {
   /* width: 420px;
   height: 420px; */
@@ -1022,6 +1024,7 @@ html {
 /* ---------------------------------------Blog.jsx------------------------------------------------ */
 #BlogSection1 {
   width: 100%;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: start;
@@ -1029,7 +1032,6 @@ html {
 }
 #BlogSection1 article {
   padding: 0rem 7rem;
-  height: 24.3rem;
   padding-top: 12rem;
   font-family: var(--HomeSection-font-family);
 }
@@ -1075,6 +1077,48 @@ html {
   height: 28rem;
 }
 
+
+/* --------------------carusel--------------------- */
+
+.TestimodalDiv .carousel {
+  position: relative;
+  overflow: hidden;
+  width: 60%;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+.TestimodalDiv .slides {
+  display: flex;
+  animation: spin 30s linear infinite;
+}
+.TestimodalDiv .slides1 {
+  display: flex;
+  animation: spin 30s linear infinite;
+}
+.TestimodalDiv .slides2 {
+  display: flex;
+  animation: spin1 30s linear infinite;
+}
+
+.TestimodalDiv .slide {
+  flex: 0 0 calc(25% - 3rem);
+  margin-right: 3rem;
+  align-self: center;
+  opacity: 5;
+}
+.TestimodalDiv .slide:last-child {
+  margin-right: calc(25% - 3rem);
+}
+
+.TestimodalDiv .CarouselImgs {
+  width: 15rem;
+  height: auto;
+  filter: grayscale(10%);
+  border-radius: 15px;
+}
+/* --------------------carusel--------------------- */
 
 
 /* ---------------------------------------Blog.jsx------------------------------------------------ */

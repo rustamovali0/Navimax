@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Girl1 from "../../Asserts/Girl_1_Img.png";
 import Girl2 from "../../Asserts/Girl_2_Img.png";
 import PhoneImg from "../../Asserts/PhoneImg.png";
-
+import Img1 from "../../Asserts/11.png";
+import Img2 from "../../Asserts/22.png";
+import Img3 from "../../Asserts/33.png";
+import Img4 from "../../Asserts/44.png";
 
 const Testimonials = () => {
   const questionsAndAnswers = [
@@ -43,9 +46,21 @@ const Testimonials = () => {
       }
     });
   };
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const items = [Img1, Img2, Img3, Img4];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === items.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [items.length]);
   return (
-    <div>
-      <section id="FeaturesSection1">
+    <div className="TestimodalDiv">
+    <section id="FeaturesSection1">
         <article>
           <h1 className="slide-up slide-up-delay-1">
           Don’t take our word for it.
@@ -62,7 +77,59 @@ const Testimonials = () => {
           </div>
         </article>
       </section>
-      <section id="HomeSection4" className="slide-up-delay-7">
+      <div className="carousel slide-up slide-up-delay-4">
+          <div
+            className="slides1"
+            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+          >
+            {items.map((item, index) => (
+              <div key={index} className="slide">
+                <img
+                  src={item}
+                  alt={`Image ${index + 1}`}
+                  className="CarouselImgs"
+                />
+              </div>
+            ))}
+            {items.map((item, index) => (
+              <div key={index + items.length} className="slide">
+                <img
+                  src={item}
+                  alt={`Image ${index + 1}`}
+                  className="CarouselImgs"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="carousel slide-up slide-up-delay-4">
+          <div
+            className="slides2"
+            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+          >
+            {items.map((item, index) => (
+              <div key={index} className="slide">
+                <img
+                  src={item}
+                  alt={`Image ${index + 1}`}
+                  className="CarouselImgs"
+                />
+              </div>
+            ))}
+            {items.map((item, index) => (
+              <div key={index + items.length} className="slide">
+                <img
+                  src={item}
+                  alt={`Image ${index + 1}`}
+                  className="CarouselImgs"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+     
+      <section id="HomeSection4" style={{marginTop:"2rem"}} className="slide-up-delay-7">
         <div className="HomeSection4Div">
           <article>
             <h5>Emily L.</h5>
