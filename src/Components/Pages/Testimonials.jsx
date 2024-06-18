@@ -71,7 +71,7 @@ const Testimonials = () => {
     <section id="FeaturesSection1" data-aos="fade-up">
         <article>
           <h1 data-aos="fade-up">
-          Don’t take our word for it.
+          Don’t take our word for it. <br />
           Over 100M people trust us
           </h1>
 
