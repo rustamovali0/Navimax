@@ -153,7 +153,7 @@ i{
 .carousel {
   position: relative;
   overflow: hidden;
-  width: 80%;
+  width: 90%;
   max-width: 100%;
   margin: 0 auto;
 }
@@ -891,10 +891,11 @@ i{
   padding: 0rem 19rem 4rem 19rem;
   padding-left: 6rem;
   font-family: var(--HomeSection-font-family);
+  padding-top: 12rem;
+
 }
 
 #FeaturesSection1 h1 {
-  padding-top: 12rem;
 
   font-size: 63px;
   font-weight: 400;
@@ -1037,11 +1038,12 @@ i{
 }
 #BlogSection1 article {
   padding: 0rem 7rem;
-  font-family: var(--HomeSection-font-family);
+  font-family: var(--HomeSection-font-family); 
+  padding-top: 12rem;
 }
 
 #BlogSection1 h1 {
-  padding-top: 12rem;
+ 
   font-size: 63px;
   font-weight: 400;
   line-height: 70px;
@@ -1088,7 +1090,7 @@ i{
 .TestimodalDiv .carousel {
   position: relative;
   overflow: hidden;
-  width: 60%;
+  width: 80%;
   max-width: 100%;
   margin: 0 auto;
   margin-top: 2rem;
