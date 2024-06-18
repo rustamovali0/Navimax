@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import AOS from "aos";
+import 'aos/dist/aos.css'
 import PhoneImg from "../../Asserts/PhoneImg.png";
 import ChatImg from "../../Asserts/ChatImg.png";
 import UserImg from "../../Asserts/UsersImg.png";
@@ -79,6 +81,12 @@ const Home = () => {
 
     return () => clearInterval(interval);
   }, [items.length]);
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, 
+      once: true,     
+    });
+  }, []);
   const [selectedText, setSelectedText] = useState(null);
   const [imageIndex, setImageIndex] = useState(0);
 
@@ -120,25 +128,25 @@ const Home = () => {
     <div>
       <section id="HomeSection1">
         <article>
-          <h1 className="slide-up slide-up-delay-1">
+          <h1 data-aos="fade-up">
             Direct path to loved ones
           </h1>
 
-          <p className="slide-up slide-up-delay-2">
+          <p data-aos="fade-up">
             Zero code, maximum speed. Make professional sites easy, fast and fun
           </p>
-          <p className="slide-up slide-up-delay-2">
+          <p data-aos="fade-up">
             while delivering best-in-class SEO, performance.
           </p>
-          <div className="HomeButtons">
-            <button className="slide-up slide-up-delay-3">App store</button>
-            <button className="slide-up slide-up-delay-3">Google Play</button>
+          <div className="HomeButtons" data-aos="fade-up">
+            <button><i class="fa-brands fa-app-store"></i>App store</button>
+            <button><i class="fa-brands fa-google-play"></i>Google Play</button>
           </div>
         </article>
-        <div className="PhoneImgHome slide-up slide-up-delay-4">
+        <div className="PhoneImgHome" data-aos="fade-up">
           <img src={PhoneImg} alt="Phone" />
         </div>
-        <div className="carousel slide-up slide-up-delay-4">
+        <div className="carousel" data-aos="fade-up">
           <div
             className="slides"
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -164,7 +172,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section id="HomeSection2" className="slide-up-delay-5">
+      <section id="HomeSection2" data-aos="fade-up">
         <div className="HomeSection2Div">
           <img src={ChatImg} alt="" />
           <article>
@@ -181,7 +189,7 @@ const Home = () => {
           </article>
         </div>
       </section>
-      <section id="HomeSection3" className="slide-up-delay-6">
+      <section id="HomeSection3" data-aos="fade-up">
         <div className="HomeSection3Div">
           <article>
             <h5>BENEFITS</h5>
@@ -199,7 +207,7 @@ const Home = () => {
           <img src={UserImg} alt="" />
         </div>
       </section>
-      <section id="HomeSection4" className="slide-up-delay-7">
+      <section id="HomeSection4" data-aos="fade-up">
         <div className="HomeSection4Div">
           <article>
             <h5>Emily L.</h5>
@@ -213,7 +221,7 @@ const Home = () => {
           <img src={Girl1} alt="" />
         </div>
       </section>
-      <section id="HomeSection5" className="slide-up-delay-8">
+      <section id="HomeSection5" data-aos="fade-up">
         <h4>HOW IT WORKS</h4>
         <h1>
           Transform Your Teeth with
@@ -226,7 +234,7 @@ const Home = () => {
           tracking, reminders, and hygiene education.
         </p>
       </section>
-      <div className="HomeSection6">
+      <div className="HomeSection6" data-aos="fade-up">
         <div className="HomeSection6Div">
           <div className="card">
             <Card image={images[imageIndex]} />
@@ -246,7 +254,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <section id="HomeSection7">
+      <section id="HomeSection7" data-aos="fade-up">
         <div className="HomeSection7Div">
           {" "}
           <article>
@@ -256,8 +264,8 @@ const Home = () => {
               fun while delivering best-in-class SEO, performance.
             </h5>
             <div className="HomeSection7Buttons">
-              <button>App store</button>
-              <button>Google Play</button>
+            <button><i class="fa-brands fa-app-store"></i>App store</button>
+            <button><i class="fa-brands fa-google-play"></i>Google Play</button>
             </div>
           </article>
           <div className="HomeSection7Img">
@@ -265,7 +273,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section id="HomeSection8">
+      <section id="HomeSection8" data-aos="fade-up">
         <article>
           {" "}
           <h4>BENEFITS</h4>
@@ -283,7 +291,7 @@ const Home = () => {
           </p>
         </article>
       </section>
-      <section id="HomeSection9">
+      <section id="HomeSection9" data-aos="fade-up">
         <div className="HomeSection9Grid">
           <div className="HomeSection9Card">
             <img src={tooth1} alt="" />
@@ -323,7 +331,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section id="HomeSection10">
+      <section id="HomeSection10" data-aos="fade-up">
         <div className="HomeSection10Div">
           <article>
             <h5>Sarah T.</h5>
@@ -337,7 +345,7 @@ const Home = () => {
           <img src={Girl2} alt="" />
         </div>
       </section>
-      <section id="HomeSection11">
+      <section id="HomeSection11" data-aos="fade-up">
         <div className="HomeSection11Card">
           <h3>John D.</h3>
           <h2>
@@ -357,7 +365,7 @@ const Home = () => {
           <p>5-star review from Play Store</p>
         </div>
       </section>
-      <section id="HomeSection12">
+      <section id="HomeSection12" data-aos="fade-up">
         <h4>ANALYTICS</h4>
         <h2>Join millions who find peace with us</h2>
         <div className="countersCon">
@@ -375,7 +383,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section id="HomeSection13">
+      <section id="HomeSection13" data-aos="fade-up">
         <div className="HomeSection13DivCon">
           <div className="HomeSection13Div">
             <h4>BLOG</h4>
@@ -386,7 +394,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section id="HomeSection14">
+      <section id="HomeSection14" data-aos="fade-up">
         <div className="HomeSection14DivCon">
           <div className="HomeSection14Div">
             <img src={PlantsImg1} alt="" />
@@ -405,7 +413,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section id="HomeSection15">
+      <section id="HomeSection15" data-aos="fade-up">
         <h4>HELP CENTER</h4>
         <h2>Frequently Asked Questions</h2>
         <p>
@@ -415,7 +423,7 @@ const Home = () => {
           section to find answers to your questions.
         </p>
       </section>
-      <section id="HomeSection16">
+      <section id="HomeSection16" data-aos="fade-up">
         <div className="container">
           {questionsAndAnswers.map((qa, index) => (
             <div key={index} className="question-container">

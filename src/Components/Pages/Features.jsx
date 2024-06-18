@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect  } from "react";
+import AOS from "aos";
+import 'aos/dist/aos.css'
 import tooth1 from "../../Asserts/tooth1.svg";
 import tooth2 from "../../Asserts/tooth2.svg";
 import tooth3 from "../../Asserts/tooth3.svg";
@@ -54,31 +56,38 @@ const Features = () => {
       }
     });
   };
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
-      <section id="FeaturesSection1">
+      <section id="FeaturesSection1" data-aos="fade-up">
         <article>
-          <h1 className="slide-up slide-up-delay-1">
+          <h1>
             Straighten your teeth without
             <br />
             braceswith our Clear Aligners
           </h1>
 
-          <p className="slide-up slide-up-delay-2">
+          <p>
             Zero code, maximum speed. Make professional sites easy, fast and fun
           </p>
-          <p className="slide-up slide-up-delay-2">
+          <p>
             while delivering best-in-class SEO, performance.
           </p>
           <div className="HomeButtons">
-            <button className="slide-up slide-up-delay-3">App store</button>
-            <button className="slide-up slide-up-delay-3">Google Play</button>
+          <button><i class="fa-brands fa-app-store"></i>App store</button>
+          <button><i class="fa-brands fa-google-play"></i>Google Play</button>
           </div>
         </article>
       </section>
       <section id="HomeSection9">
         <div className="HomeSection9Grid">
-          <div className="HomeSection9Card">
+          <div className="HomeSection9Card" data-aos="fade-up">
             <img src={tooth1} alt="" />
             <h2>Maximize your control with Mobi</h2>
             <p>
@@ -87,7 +96,7 @@ const Features = () => {
             </p>
             <button>Learn More</button>
           </div>
-          <div className="HomeSection9Card">
+          <div className="HomeSection9Card" data-aos="fade-up">
             <img src={tooth2} alt="" />
             <h2>Maximize your control with Mobi</h2>
             <p>
@@ -96,7 +105,7 @@ const Features = () => {
             </p>
             <button>Learn More</button>
           </div>
-          <div className="HomeSection9Card">
+          <div className="HomeSection9Card" data-aos="fade-up">
             <img src={tooth3} alt="" />
             <h2>Maximize your control with Mobi</h2>
             <p>
@@ -105,7 +114,7 @@ const Features = () => {
             </p>
             <button>Learn More</button>
           </div>
-          <div className="HomeSection9Card">
+          <div className="HomeSection9Card" data-aos="fade-up">
             <img src={tooth4} alt="" />
             <h2>Maximize your control with Mobi</h2>
             <p>
@@ -116,7 +125,7 @@ const Features = () => {
           </div>
         </div>
       </section>
-      <section id="HomeSection2" className="slide-up-delay-5">
+      <section id="HomeSection2" data-aos="fade-up">
         <div className="HomeSection2Div">
           <img src={ChatImg} alt="" />
           <article>
@@ -133,7 +142,7 @@ const Features = () => {
           </article>
         </div>
       </section>
-      <section id="HomeSection3" className="slide-up-delay-6">
+      <section id="HomeSection3" data-aos="fade-up">
         <div className="HomeSection3Div">
           <article>
             <h5>BENEFITS</h5>
@@ -151,7 +160,7 @@ const Features = () => {
           <img src={UserImg} alt="" />
         </div>
       </section>
-      <section id="HomeSection2" className="slide-up-delay-5">
+      <section id="HomeSection2" data-aos="fade-up">
         <div className="HomeSection2Div">
           <img src={NameSection3} alt="" />
           <article>
@@ -169,7 +178,7 @@ const Features = () => {
           </article>
         </div>
       </section>
-      <section id="HomeSection3" className="slide-up-delay-6">
+      <section id="HomeSection3" data-aos="fade-up">
         <div className="HomeSection3Div">
           <article>
             <h5>BENEFITS</h5>
@@ -187,7 +196,7 @@ const Features = () => {
           <img src={NameSection2} alt="" />
         </div>
       </section>
-      <section id="HomeSection7">
+      <section id="HomeSection7" data-aos="fade-up">
         <div className="HomeSection7Div">
           {" "}
           <article>
@@ -197,8 +206,8 @@ const Features = () => {
               fun while delivering best-in-class SEO, performance.
             </h5>
             <div className="HomeSection7Buttons">
-              <button>App store</button>
-              <button>Google Play</button>
+            <button><i class="fa-brands fa-app-store"></i>App store</button>
+            <button><i class="fa-brands fa-google-play"></i>Google Play</button>
             </div>
           </article>
           <div className="HomeSection7Img">
@@ -206,7 +215,7 @@ const Features = () => {
           </div>
         </div>
       </section>
-      <section id="HomeSection15">
+      <section id="HomeSection15" data-aos="fade-up">
         <h4>HELP CENTER</h4>
         <h2>Frequently Asked Questions</h2>
         <p>
@@ -216,7 +225,7 @@ const Features = () => {
           section to find answers to your questions.
         </p>
       </section>
-      <section id="HomeSection16">
+      <section id="HomeSection16" data-aos="fade-up">
         <div className="container">
           {questionsAndAnswers.map((qa, index) => (
             <div key={index} className="question-container">

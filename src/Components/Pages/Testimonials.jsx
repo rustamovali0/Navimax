@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import AOS from "aos";
+import 'aos/dist/aos.css'
 import Girl1 from "../../Asserts/Girl_1_Img.png";
 import Girl2 from "../../Asserts/Girl_2_Img.png";
 import PhoneImg from "../../Asserts/PhoneImg.png";
@@ -58,26 +60,32 @@ const Testimonials = () => {
 
     return () => clearInterval(interval);
   }, [items.length]);
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, 
+      once: true,     
+    });
+  }, []);
   return (
     <div className="TestimodalDiv">
-    <section id="FeaturesSection1">
+    <section id="FeaturesSection1" data-aos="fade-up">
         <article>
-          <h1 className="slide-up slide-up-delay-1">
+          <h1 data-aos="fade-up">
           Don’t take our word for it.
           <br />
           Over 100M people trust us
           </h1>
 
-          <p className="slide-up slide-up-delay-2">
+          <p data-aos="fade-up">
           Our team strives to provide the best customer experience possible. See how our dedication to customer satisfaction translates into success           </p>
-          <p className="slide-up slide-up-delay-2">
+          <p data-aos="fade-up">
           stories from our customers. These testimonials speak to our mission of making our customers happy and fulfilled.          </p>
-          <div className="HomeButtons">
-            <button className="slide-up slide-up-delay-3" style={{backgroundColor:"#d24f3d"}}>Get in Touch</button>
+          <div className="HomeButtons" data-aos="fade-up">
+            <button style={{backgroundColor:"#d24f3d"}}>Get in Touch</button>
           </div>
         </article>
       </section>
-      <div className="carousel slide-up slide-up-delay-4">
+      <div className="carousel" data-aos="fade-up">
           <div
             className="slides1"
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -103,7 +111,7 @@ const Testimonials = () => {
           </div>
         </div>
 
-        <div className="carousel slide-up slide-up-delay-4">
+        <div className="carousel" data-aos="fade-up">
           <div
             className="slides2"
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -129,7 +137,7 @@ const Testimonials = () => {
           </div>
         </div>
      
-      <section id="HomeSection4" style={{marginTop:"2rem"}} className="slide-up-delay-7">
+      <section id="HomeSection4" data-aos="fade-up" style={{marginTop:"2rem"}}>
         <div className="HomeSection4Div">
           <article>
             <h5>Emily L.</h5>
@@ -143,8 +151,8 @@ const Testimonials = () => {
           <img src={Girl1} alt="" />
         </div>
       </section>
-      <section id="TestimonialSection1">
-        <div className="TestimonialSection1Card TestimonialSection1Card1">
+      <section id="TestimonialSection1" data-aos="fade-up">
+        <div className="TestimonialSection1Card TestimonialSection1Card1" data-aos="fade-up">
           <h3>John D.</h3>
           <h2>
             “I had been experiencing tooth pain for years, but was too afraid to
@@ -153,27 +161,7 @@ const Testimonials = () => {
           </h2>
           <p>5-star review from Play Store</p>
         </div>
-        <div className="TestimonialSection1Card TestimonialSection1Card2">
-          <h3>John D.</h3>
-          <h2>
-            “I had been experiencing tooth pain for years, but was too afraid to
-            go to the dentist. Mobi made the process easy and painless, and now
-            I’m pain-free!”
-          </h2>
-          <p>5-star review from Play Store</p>
-        </div>
-      </section>
-      <section id="TestimonialSection1">
-        <div className="TestimonialSection1Card TestimonialSection1Card3">
-          <h3>John D.</h3>
-          <h2>
-            “I had been experiencing tooth pain for years, but was too afraid to
-            go to the dentist. Mobi made the process easy and painless, and now
-            I’m pain-free!”
-          </h2>
-          <p>5-star review from Play Store</p>
-        </div>
-        <div className="TestimonialSection1Card TestimonialSection1Card4">
+        <div className="TestimonialSection1Card TestimonialSection1Card2" data-aos="fade-up">
           <h3>John D.</h3>
           <h2>
             “I had been experiencing tooth pain for years, but was too afraid to
@@ -183,7 +171,27 @@ const Testimonials = () => {
           <p>5-star review from Play Store</p>
         </div>
       </section>
-      <section id="HomeSection10">
+      <section id="TestimonialSection1" data-aos="fade-up">
+        <div className="TestimonialSection1Card TestimonialSection1Card3" data-aos="fade-up">
+          <h3>John D.</h3>
+          <h2>
+            “I had been experiencing tooth pain for years, but was too afraid to
+            go to the dentist. Mobi made the process easy and painless, and now
+            I’m pain-free!”
+          </h2>
+          <p>5-star review from Play Store</p>
+        </div>
+        <div className="TestimonialSection1Card TestimonialSection1Card4" data-aos="fade-up">
+          <h3>John D.</h3>
+          <h2>
+            “I had been experiencing tooth pain for years, but was too afraid to
+            go to the dentist. Mobi made the process easy and painless, and now
+            I’m pain-free!”
+          </h2>
+          <p>5-star review from Play Store</p>
+        </div>
+      </section>
+      <section id="HomeSection10" data-aos="fade-up">
         <div className="HomeSection10Div">
           <article>
             <h5>Sarah T.</h5>
@@ -197,7 +205,7 @@ const Testimonials = () => {
           <img src={Girl2} alt="" />
         </div>
       </section>
-      <section id="HomeSection7" style={{marginTop:"2rem"}}>
+      <section id="HomeSection7" data-aos="fade-up" style={{marginTop:"2rem"}}>
         <div className="HomeSection7Div">
           {" "}
           <article>
@@ -206,9 +214,9 @@ const Testimonials = () => {
               Zero code, maximum speed. Make professional sites easy, fast and
               fun while delivering best-in-class SEO, performance.
             </h5>
-            <div className="HomeSection7Buttons">
-              <button>App store</button>
-              <button>Google Play</button>
+            <div className="HomeSection7Buttons" data-aos="fade-up">
+            <button><i class="fa-brands fa-app-store"></i>App store</button>
+            <button><i class="fa-brands fa-google-play"></i>Google Play</button>
             </div>
           </article>
           <div className="HomeSection7Img">
@@ -216,7 +224,7 @@ const Testimonials = () => {
           </div>
         </div>
       </section>
-      <section id="HomeSection15">
+      <section id="HomeSection15" data-aos="fade-up">
         <h4>HELP CENTER</h4>
         <h2>Frequently Asked Questions</h2>
         <p>
@@ -226,8 +234,8 @@ const Testimonials = () => {
           section to find answers to your questions.
         </p>
       </section>
-      <section id="HomeSection16">
-        <div className="container">
+      <section id="HomeSection16" data-aos="fade-up">
+        <div className="container" data-aos="fade-up">
           {questionsAndAnswers.map((qa, index) => (
             <div key={index} className="question-container">
               <div className="question" onClick={() => toggleAnswer(index)}>

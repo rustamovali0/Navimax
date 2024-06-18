@@ -7,10 +7,12 @@ import Testimonials from "./Components/Pages/Testimonials";
 import Blog from "./Components/Pages/Blog";
 import Contact from "./Components/Pages/Contact";
 import Footer from "./Components/Footer";
+import ScrollToTop from "./ScrollToTop";
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+      <ScrollToTop />
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />

@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-
+import React, { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Contact = () => {
   const questionsAndAnswers = [
     {
@@ -39,26 +40,31 @@ const Contact = () => {
       }
     });
   };
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
   return (
     <div>
-       <section id="ContactSection1">
+      <section id="ContactSection1" data-aos="fade-up">
         <article>
-          <h1 className="slide-up slide-up-delay-1">
-          Don’t take our word for it.
-          <br />
-          Over 100M people trust us
-          </h1>
-
-          <p className="slide-up slide-up-delay-2">
-          Our team strives to provide the best customer experience possible. See how our dedication to customer satisfaction translates into success           </p>
-          <p className="slide-up slide-up-delay-2">
-          stories from our customers. These testimonials speak to our mission of making our customers happy and fulfilled.          </p>
-          <div className="ContactButtons">
-            <button className="slide-up slide-up-delay-3" style={{backgroundColor:"#d24f3d"}}>Get in Touch</button>
-          </div>
+          <h5>CONTACT</h5>
+          <h1>Get in touch</h1>
+          <p>
+            Reach out to us through the contact form or the details provided
+            below to share your feedback, inquiries, or suggestions.
+          </p>
         </article>
+        <form>
+          <input type="text" name="Name" placeholder="Name"/>
+          <input type="email" name="Email" id="" placeholder="Email"/>
+          <textarea name="Message" id="message" placeholder="Message"></textarea>
+          <button>Sign Up</button>
+        </form>
       </section>
-      <section id="HomeSection15">
+      <section id="HomeSection15" data-aos="fade-up">
         <h4>HELP CENTER</h4>
         <h2>Frequently Asked Questions</h2>
         <p>
@@ -68,7 +74,7 @@ const Contact = () => {
           section to find answers to your questions.
         </p>
       </section>
-      <section id="HomeSection16">
+      <section id="HomeSection16" data-aos="fade-up">
         <div className="container">
           {questionsAndAnswers.map((qa, index) => (
             <div key={index} className="question-container">
@@ -86,7 +92,7 @@ const Contact = () => {
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;
